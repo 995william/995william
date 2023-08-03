@@ -1,4 +1,4 @@
-### **<div align="center">I'm Rishav, a full-time full-stack freelance developer 👨‍💻 working remotely since 2018 🚀</div>**  
+### **<div align="center">I'm Mr-吴, a full-time full-stack freelance developer 👨‍💻 working remotely since 2018 🚀</div>**  
 
 
 - 🔭 I’m currently working on Home  
@@ -16,9 +16,8 @@
   <img src="https://github-readme-stats.vercel.app/api?username=qq670607946&hide_title=true&hide_border=true&show_icons=true&include_all_commits=true&line_height=21&bg_color=0,EC6C6C,FFD479,FFFC79,73FA79&theme=graywhite&locale=cn" /> 
 </div>
 
-<div align="center"> <img src="https://raw.githubusercontent.com/qq670607946/qq670607946/main/assets/github-contribution-grid-snake.svg" /> </div>
+<!--<div align="center"> <img src="https://raw.githubusercontent.com/qq670607946/qq670607946/main/assets/github-contribution-grid-snake.svg" /> </div>-->
 
-<div align="center"> <img src="https://github-readme-activity-graph.vercel.app/graph?username=qq670607946&theme=minimal" /> </div>
 
 
 
@@ -73,3 +72,5 @@
 </td></tr></table>  
 
 <br/>  
+<div align="center"> <img src="https://github-readme-activity-graph.vercel.app/graph?username=qq670607946&theme=minimal" /> </div>
+
