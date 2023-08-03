@@ -18,7 +18,7 @@
 
 <div align="center"><img src="https://cdn.jsdelivr.net/gh/qq670607946/qq670607946/assets/github-contribution-grid-snake.svg" /></div>
 
-<div align="center"> <img src="https://github-readme-activity-graph.vercel.app/graph?username=qq670607946&theme=xcode" /> </div>
+<div align="center"> <img src="https://github-readme-activity-graph.vercel.app/graph?username=qq670607946&theme=minimal" /> </div>
 
 
 
