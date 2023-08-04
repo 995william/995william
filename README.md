@@ -1,7 +1,7 @@
-### **<div align="center">I'm Mr-吴, a full-time full-stack freelance developer 👨‍💻 working remotely since 2018 🚀</div>**  
+### **<div align="center">I'm Mr-吴, a full-time full-stack freelance developer 👨‍💻 working since 2018 🚀</div>**  
 
 
-- 🔭 I’m currently working on Home  
+- 🔭 I’m currently working at Home  
   
 - 🌱 I’m currently learning Java and Python  
   
