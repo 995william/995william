@@ -19,13 +19,12 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Generate Snake SVG
+      - name: Generate Snake SVG with Lightfall Colors
         uses: Platane/snk/svg-only@v3
         with:
           github_user_name: 995william
           outputs: |
-            assets/github-contribution-grid-snake.svg
-            assets/github-contribution-grid-snake-dark.svg?palette=github-dark
+            assets/github-contribution-grid-snake.svg?color_snake=#0284c7&color_dots=#f1f5f9,#bae6fd,#38bdf8,#818cf8,#a855f7
 
       - name: Commit & Push Snake SVG
         uses: EndBug/add-and-commit@v9
