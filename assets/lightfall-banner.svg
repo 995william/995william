@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 820" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 900" width="100%" height="100%">
   <defs>
     <!-- 卡片无边框柔和投影 -->
     <filter id="cardShadow" x="-10%" y="-10%" width="120%" height="120%">
@@ -14,7 +14,7 @@
       </feMerge>
     </filter>
 
-    <!-- 文字发光投影（保障在流光上方极度锐利，无需边框也绝不模糊） -->
+    <!-- 文字发光投影 -->
     <filter id="textHalo" x="-20%" y="-20%" width="140%" height="140%">
       <feDropShadow dx="0" dy="1.5" stdDeviation="3" flood-color="#ffffff" flood-opacity="0.98"/>
     </filter>
@@ -52,7 +52,7 @@
   </defs>
 
   <style>
-    /* 垂直下落流光动画：纵贯全屏无缝循环 */
+    /* 垂直下落流光动画：全篇 900px 纵贯无缝循环 */
     @keyframes lightfall {
       0% {
         transform: translateY(-240px);
@@ -65,7 +65,7 @@
         opacity: 0.95;
       }
       100% {
-        transform: translateY(920px);
+        transform: translateY(1000px);
         opacity: 0;
       }
     }
@@ -112,30 +112,30 @@
     }
   </style>
 
-  <!-- 1. 全覆盖贯穿全篇的 Lightfall 垂直流光雨 (全宽 900px, 高度 820px) -->
+  <!-- 1. 全覆盖贯穿全篇的 Lightfall 垂直流光雨 (全宽 900px, 纵贯全篇 900px) -->
   <g id="lightfall-streams">
-    <g class="beam b-1"><rect x="25" y="0" width="2.5" height="180" rx="1.25" fill="url(#streamCyan)" filter="url(#glow)"/><circle cx="26.25" cy="180" r="3" fill="#00f0ff"/></g>
-    <g class="beam b-2"><rect x="75" y="0" width="3.5" height="220" rx="1.75" fill="url(#streamPurple)" filter="url(#glow)"/><circle cx="76.75" cy="220" r="3.5" fill="#c084fc"/></g>
-    <g class="beam b-3"><rect x="130" y="0" width="2" height="150" rx="1" fill="url(#streamEmerald)"/><circle cx="131" cy="150" r="2.5" fill="#34d399"/></g>
-    <g class="beam b-4"><rect x="185" y="0" width="3" height="200" rx="1.5" fill="url(#streamPink)" filter="url(#glow)"/><circle cx="186.5" cy="200" r="3" fill="#fb7185"/></g>
-    <g class="beam b-5"><rect x="240" y="0" width="2.5" height="170" rx="1.25" fill="url(#streamCyan)"/><circle cx="241.25" cy="170" r="2.5" fill="#00f0ff"/></g>
-    <g class="beam b-6"><rect x="295" y="0" width="4" height="230" rx="2" fill="url(#streamPurple)" filter="url(#glow)"/><circle cx="297" cy="230" r="4" fill="#a855f7"/></g>
-    <g class="beam b-7"><rect x="355" y="0" width="2" height="160" rx="1" fill="url(#streamAmber)"/><circle cx="356" cy="160" r="2.5" fill="#f59e0b"/></g>
-    <g class="beam b-8"><rect x="415" y="0" width="3" height="210" rx="1.5" fill="url(#streamEmerald)" filter="url(#glow)"/><circle cx="416.5" cy="210" r="3" fill="#10b981"/></g>
+    <g class="beam b-1"><rect x="25" y="0" width="2.5" height="190" rx="1.25" fill="url(#streamCyan)" filter="url(#glow)"/><circle cx="26.25" cy="190" r="3" fill="#00f0ff"/></g>
+    <g class="beam b-2"><rect x="75" y="0" width="3.5" height="230" rx="1.75" fill="url(#streamPurple)" filter="url(#glow)"/><circle cx="76.75" cy="230" r="3.5" fill="#c084fc"/></g>
+    <g class="beam b-3"><rect x="130" y="0" width="2" height="160" rx="1" fill="url(#streamEmerald)"/><circle cx="131" cy="160" r="2.5" fill="#34d399"/></g>
+    <g class="beam b-4"><rect x="185" y="0" width="3" height="210" rx="1.5" fill="url(#streamPink)" filter="url(#glow)"/><circle cx="186.5" cy="210" r="3" fill="#fb7185"/></g>
+    <g class="beam b-5"><rect x="240" y="0" width="2.5" height="180" rx="1.25" fill="url(#streamCyan)"/><circle cx="241.25" cy="180" r="2.5" fill="#00f0ff"/></g>
+    <g class="beam b-6"><rect x="295" y="0" width="4" height="240" rx="2" fill="url(#streamPurple)" filter="url(#glow)"/><circle cx="297" cy="240" r="4" fill="#a855f7"/></g>
+    <g class="beam b-7"><rect x="355" y="0" width="2" height="170" rx="1" fill="url(#streamAmber)"/><circle cx="356" cy="170" r="2.5" fill="#f59e0b"/></g>
+    <g class="beam b-8"><rect x="415" y="0" width="3" height="220" rx="1.5" fill="url(#streamEmerald)" filter="url(#glow)"/><circle cx="416.5" cy="220" r="3" fill="#10b981"/></g>
     
-    <g class="beam b-9"><rect x="475" y="0" width="2.5" height="170" rx="1.25" fill="url(#streamCyan)"/><circle cx="476.25" cy="170" r="2.5" fill="#38bdf8"/></g>
-    <g class="beam b-10"><rect x="535" y="0" width="3.5" height="220" rx="1.75" fill="url(#streamPurple)" filter="url(#glow)"/><circle cx="536.75" cy="220" r="3.5" fill="#c084fc"/></g>
-    <g class="beam b-11"><rect x="595" y="0" width="3" height="190" rx="1.5" fill="url(#streamCyan)" filter="url(#glow)"/><circle cx="596.5" cy="190" r="3" fill="#00f0ff"/></g>
-    <g class="beam b-12"><rect x="650" y="0" width="2" height="180" rx="1" fill="url(#streamPink)"/><circle cx="651" cy="180" r="2.5" fill="#f472b6"/></g>
-    <g class="beam b-13"><rect x="705" y="0" width="3.5" height="240" rx="1.75" fill="url(#streamPurple)" filter="url(#glow)"/><circle cx="706.75" cy="240" r="3.5" fill="#a855f7"/></g>
-    <g class="beam b-14"><rect x="760" y="0" width="2" height="160" rx="1" fill="url(#streamEmerald)"/><circle cx="761" cy="160" r="2.5" fill="#34d399"/></g>
-    <g class="beam b-15"><rect x="815" y="0" width="3" height="210" rx="1.5" fill="url(#streamCyan)" filter="url(#glow)"/><circle cx="816.5" cy="210" r="3" fill="#00f0ff"/></g>
-    <g class="beam b-16"><rect x="870" y="0" width="2.5" height="180" rx="1.25" fill="url(#streamAmber)"/><circle cx="871.25" cy="180" r="2.5" fill="#fbbf24"/></g>
+    <g class="beam b-9"><rect x="475" y="0" width="2.5" height="180" rx="1.25" fill="url(#streamCyan)"/><circle cx="476.25" cy="180" r="2.5" fill="#38bdf8"/></g>
+    <g class="beam b-10"><rect x="535" y="0" width="3.5" height="230" rx="1.75" fill="url(#streamPurple)" filter="url(#glow)"/><circle cx="536.75" cy="230" r="3.5" fill="#c084fc"/></g>
+    <g class="beam b-11"><rect x="595" y="0" width="3" height="200" rx="1.5" fill="url(#streamCyan)" filter="url(#glow)"/><circle cx="596.5" cy="200" r="3" fill="#00f0ff"/></g>
+    <g class="beam b-12"><rect x="650" y="0" width="2" height="190" rx="1" fill="url(#streamPink)"/><circle cx="651" cy="190" r="2.5" fill="#f472b6"/></g>
+    <g class="beam b-13"><rect x="705" y="0" width="3.5" height="250" rx="1.75" fill="url(#streamPurple)" filter="url(#glow)"/><circle cx="706.75" cy="250" r="3.5" fill="#a855f7"/></g>
+    <g class="beam b-14"><rect x="760" y="0" width="2" height="170" rx="1" fill="url(#streamEmerald)"/><circle cx="761" cy="170" r="2.5" fill="#34d399"/></g>
+    <g class="beam b-15"><rect x="815" y="0" width="3" height="220" rx="1.5" fill="url(#streamCyan)" filter="url(#glow)"/><circle cx="816.5" cy="220" r="3" fill="#00f0ff"/></g>
+    <g class="beam b-16"><rect x="870" y="0" width="2.5" height="190" rx="1.25" fill="url(#streamAmber)"/><circle cx="871.25" cy="190" r="2.5" fill="#fbbf24"/></g>
   </g>
 
-  <!-- ==================== 区域 1：头部核心大标题 (超大字号，无边框) ==================== -->
+  <!-- ==================== 区域 1：头部核心标识 ==================== -->
   <g id="header-section">
-    <!-- 状态指示胶囊（无边框，极度透光软卡片） -->
+    <!-- 状态指示胶囊 -->
     <g transform="translate(275, 20)">
       <rect width="350" height="34" rx="17" fill="#ffffff" fill-opacity="0.9" filter="url(#cardShadow)"/>
       <circle cx="22" cy="17" r="5.5" fill="#10b981" class="glow-dot"/>
@@ -144,34 +144,60 @@
       </text>
     </g>
 
-    <!-- 主标题 (大字号 44px，极粗，高对比度) -->
-    <g transform="translate(450, 100)" text-anchor="middle" filter="url(#textHalo)">
+    <!-- 主标题 (大字号 44px) -->
+    <g transform="translate(450, 95)" text-anchor="middle" filter="url(#textHalo)">
       <text font-family="'JetBrains Mono', 'Fira Code', -apple-system, sans-serif" font-size="44" font-weight="900" fill="#0f172a" letter-spacing="0.5">
         Hi, I'm <tspan fill="#0284c7">Mr-吴</tspan> (995william) <tspan font-size="36">⚡</tspan>
       </text>
     </g>
 
-    <!-- 职业副标题 (字号 19px 加粗，深黑深蓝高对比) -->
-    <g transform="translate(450, 142)" text-anchor="middle" filter="url(#textHalo)">
+    <!-- 职业副标题 (大字号 19px) -->
+    <g transform="translate(450, 138)" text-anchor="middle" filter="url(#textHalo)">
       <text font-family="'JetBrains Mono', 'Fira Code', -apple-system, monospace" font-size="19" font-weight="800" fill="#1e293b">
         全栈自由开发工程师 <tspan fill="#8b5cf6">·</tspan> 自动化脚本与运维专精 <tspan fill="#8b5cf6">·</tspan> 2018 至今
       </text>
     </g>
 
     <!-- 属性标签 (字号 15px 加粗) -->
-    <g transform="translate(450, 178)" text-anchor="middle" filter="url(#textHalo)">
+    <g transform="translate(450, 172)" text-anchor="middle" filter="url(#textHalo)">
       <text font-family="'JetBrains Mono', 'Fira Code', monospace" font-size="15" font-weight="700" fill="#334155">
         <tspan fill="#10b981" font-weight="900">➜</tspan> <tspan fill="#0284c7">坐标</tspan>: 远程/自由职业 <tspan fill="#94a3b8">|</tspan> <tspan fill="#0284c7">核心技术</tspan>: Java + Python + Vue <tspan fill="#94a3b8">|</tspan> <tspan fill="#0284c7">信仰</tspan>: Tabs &gt; Spaces <tspan fill="#0284c7" class="cursor">_</tspan>
       </text>
     </g>
+
+    <!-- 【根据用户要求】：原底部的框选徽章已移动到这里 (坐标正下方，终端上方) -->
+    <g id="pinned-badges-row" transform="translate(450, 218)" text-anchor="middle">
+      <!-- 博客园 Badge -->
+      <g transform="translate(-255, 0)">
+        <rect width="150" height="34" rx="8" fill="#ffffff" fill-opacity="0.9" filter="url(#cardShadow)"/>
+        <text x="75" y="22" font-family="-apple-system, sans-serif" font-size="13" font-weight="800" fill="#0284c7">
+          📝 博客园: 995i996
+        </text>
+      </g>
+
+      <!-- ikuuu_checkIn Badge -->
+      <g transform="translate(-85, 0)">
+        <rect width="185" height="34" rx="8" fill="#ffffff" fill-opacity="0.9" filter="url(#cardShadow)"/>
+        <text x="92" y="22" font-family="-apple-system, sans-serif" font-size="13" font-weight="800" fill="#d97706">
+          🚁 ikuuu ★ 8 Stars
+        </text>
+      </g>
+
+      <!-- ossimport-Tool Badge -->
+      <g transform="translate(118, 0)">
+        <rect width="175" height="34" rx="8" fill="#ffffff" fill-opacity="0.9" filter="url(#cardShadow)"/>
+        <text x="87" y="22" font-family="-apple-system, sans-serif" font-size="13" font-weight="800" fill="#16a34a">
+          📦 ossimport OSS迁移
+        </text>
+      </g>
+    </g>
   </g>
 
-  <!-- ==================== 区域 2：macOS 终端窗口 (无边框全宽，代码字号 16px-18px) ==================== -->
-  <g id="terminal-section" transform="translate(15, 208)">
-    <!-- 终端外壳（无边框，870px全覆盖宽度，半透白立体投影） -->
-    <rect width="870" height="248" rx="16" fill="#ffffff" fill-opacity="0.88" filter="url(#cardShadow)"/>
+  <!-- ==================== 区域 2：macOS 终端窗口 (无边框全宽，代码字号 16px) ==================== -->
+  <g id="terminal-section" transform="translate(15, 255)">
+    <rect width="870" height="236" rx="16" fill="#ffffff" fill-opacity="0.88" filter="url(#cardShadow)"/>
     
-    <!-- 顶部圆点栏 -->
+    <!-- 顶部控制圆点 -->
     <circle cx="28" cy="22" r="6" fill="#ff5f56"/>
     <circle cx="48" cy="22" r="6" fill="#ffbd2e"/>
     <circle cx="68" cy="22" r="6" fill="#27c93f"/>
@@ -179,37 +205,33 @@
       user@995william:~ (zsh) — lightfall stream
     </text>
 
-    <!-- 终端内容文本 (大幅放大，命令 18px，内容 15px-16px，字字清晰) -->
-    <g transform="translate(32, 65)" font-family="'JetBrains Mono', 'Fira Code', monospace" font-size="16" filter="url(#textHalo)">
-      <!-- whoami -->
+    <!-- 终端代码内容 -->
+    <g transform="translate(32, 60)" font-family="'JetBrains Mono', 'Fira Code', monospace" font-size="16" filter="url(#textHalo)">
       <text y="0">
         <tspan fill="#10b981" font-weight="900">➜</tspan> <tspan fill="#0284c7" font-weight="800">~</tspan> <tspan fill="#0f172a" font-weight="900">whoami</tspan>
       </text>
-      <text y="27" fill="#1e293b" font-weight="700" font-size="15">
-        Mr-吴 · 全栈自由开发工程师 👨‍💻 (专注自动化任务、逆向爬虫、云原生系统交付)
+      <text y="26" fill="#1e293b" font-weight="700" font-size="15">
+        Mr-吴 · 全栈自由开发工程师 👨‍💻 (专注自动化任务调度、逆向爬虫开发、高可用系统交付)
       </text>
 
-      <!-- cat current_focus.json -->
-      <text y="64">
+      <text y="60">
         <tspan fill="#10b981" font-weight="900">➜</tspan> <tspan fill="#0284c7" font-weight="800">~</tspan> <tspan fill="#0f172a" font-weight="900">cat current_focus.json</tspan>
       </text>
-      <text y="90" fill="#1e293b" font-weight="700" font-size="15">{</text>
-      <text y="114" fill="#334155" font-weight="700" font-size="15">  "work_mode": <tspan fill="#0284c7">"Full-Time Remote / Available for Freelance"</tspan>,</text>
-      <text y="138" fill="#334155" font-weight="700" font-size="15">  "core_stack": [<tspan fill="#10b981">"Java (Spring)"</tspan>, <tspan fill="#10b981">"Python (Flask)"</tspan>, <tspan fill="#10b981">"Vue.js 3"</tspan>, <tspan fill="#10b981">"Docker"</tspan>, <tspan fill="#10b981">"MySQL"</tspan>, <tspan fill="#10b981">"Redis"</tspan>],</text>
-      <text y="162" fill="#334155" font-weight="700" font-size="15">  "specialties": [<tspan fill="#8b5cf6">"自动化任务调度"</tspan>, <tspan fill="#8b5cf6">"逆向爬虫开发"</tspan>, <tspan fill="#8b5cf6">"高可用系统交付"</tspan>]</text>
-      <text y="176" fill="#1e293b" font-weight="700" font-size="15">}</text>
+      <text y="86" fill="#1e293b" font-weight="700" font-size="15">{</text>
+      <text y="108" fill="#334155" font-weight="700" font-size="15">  "work_mode": <tspan fill="#0284c7">"Full-Time Remote / Available for Freelance"</tspan>,</text>
+      <text y="130" fill="#334155" font-weight="700" font-size="15">  "core_stack": [<tspan fill="#10b981">"Java (Spring)"</tspan>, <tspan fill="#10b981">"Python (Flask)"</tspan>, <tspan fill="#10b981">"Vue.js 3"</tspan>, <tspan fill="#10b981">"Docker"</tspan>, <tspan fill="#10b981">"MySQL"</tspan>, <tspan fill="#10b981">"Redis"</tspan>],</text>
+      <text y="152" fill="#334155" font-weight="700" font-size="15">  "specialties": [<tspan fill="#8b5cf6">"自动化任务调度"</tspan>, <tspan fill="#8b5cf6">"逆向爬虫开发"</tspan>, <tspan fill="#8b5cf6">"高可用后端交付"</tspan>]</text>
+      <text y="166" fill="#1e293b" font-weight="700" font-size="15">}</text>
     </g>
   </g>
 
-  <!-- ==================== 区域 3：技能装备库 (无边框胶囊，大字号 16px) ==================== -->
-  <g id="skills-section" transform="translate(15, 482)">
-    <!-- 标题 -->
+  <!-- ==================== 区域 3：技能装备库 (无边框胶囊，字号 16px) ==================== -->
+  <g id="skills-section" transform="translate(15, 510)">
     <text x="5" y="16" font-family="'JetBrains Mono', -apple-system, sans-serif" font-size="18" font-weight="900" fill="#0f172a" letter-spacing="0.5">
       🛠️ 核心技能清单 (TECH STACK ARSENAL)
     </text>
 
-    <!-- 技能胶囊组 (全宽展开，无边框，字号 16px 加粗) -->
-    <g transform="translate(0, 32)">
+    <g transform="translate(0, 30)">
       <!-- 第 1 排 -->
       <g transform="translate(0, 0)">
         <rect width="120" height="42" rx="10" fill="#ffffff" fill-opacity="0.9" filter="url(#cardShadow)"/>
@@ -237,88 +259,48 @@
       </g>
 
       <!-- 第 2 排 -->
-      <g transform="translate(0, 54)">
+      <g transform="translate(0, 52)">
         <rect width="125" height="42" rx="10" fill="#ffffff" fill-opacity="0.9" filter="url(#cardShadow)"/>
         <text x="16" y="27" font-family="-apple-system, sans-serif" font-size="16" font-weight="800" fill="#0284c7">🐬 MySQL</text>
       </g>
-      <g transform="translate(140, 54)">
+      <g transform="translate(140, 52)">
         <rect width="125" height="42" rx="10" fill="#ffffff" fill-opacity="0.9" filter="url(#cardShadow)"/>
         <text x="16" y="27" font-family="-apple-system, sans-serif" font-size="16" font-weight="800" fill="#dc2626">🔴 Redis</text>
       </g>
-      <g transform="translate(280, 54)">
+      <g transform="translate(280, 52)">
         <rect width="135" height="42" rx="10" fill="#ffffff" fill-opacity="0.9" filter="url(#cardShadow)"/>
         <text x="16" y="27" font-family="-apple-system, sans-serif" font-size="16" font-weight="800" fill="#0284c7">🐳 Docker</text>
       </g>
-      <g transform="translate(430, 54)">
+      <g transform="translate(430, 52)">
         <rect width="125" height="42" rx="10" fill="#ffffff" fill-opacity="0.9" filter="url(#cardShadow)"/>
         <text x="16" y="27" font-family="-apple-system, sans-serif" font-size="16" font-weight="800" fill="#334155">🐧 Linux</text>
       </g>
-      <g transform="translate(570, 54)">
+      <g transform="translate(570, 52)">
         <rect width="130" height="42" rx="10" fill="#ffffff" fill-opacity="0.9" filter="url(#cardShadow)"/>
         <text x="16" y="27" font-family="-apple-system, sans-serif" font-size="16" font-weight="800" fill="#16a34a">⚙️ Nginx</text>
       </g>
-      <g transform="translate(715, 54)">
+      <g transform="translate(715, 52)">
         <rect width="155" height="42" rx="10" fill="#ffffff" fill-opacity="0.9" filter="url(#cardShadow)"/>
         <text x="16" y="27" font-family="-apple-system, sans-serif" font-size="16" font-weight="800" fill="#ea580c">🐙 Git / CI·CD</text>
       </g>
     </g>
   </g>
 
-  <!-- ==================== 区域 4：精选开源项目 (无边框卡片，标题 22px，描述 15px) ==================== -->
-  <g id="projects-section" transform="translate(15, 650)">
-    <!-- 标题 -->
+  <!-- ==================== 区域 4：【根据用户要求】：精选开源已去掉，贪吃蛇直接内嵌在背景内！ ==================== -->
+  <g id="snake-section" transform="translate(15, 660)">
+    <!-- 贪吃蛇标题 (大字号 18px) -->
     <text x="5" y="16" font-family="'JetBrains Mono', -apple-system, sans-serif" font-size="18" font-weight="900" fill="#0f172a" letter-spacing="0.5">
-      🚀 精选开源代表作 (FEATURED REPOSITORIES)
+      🐍 贡献活跃轨迹 (CONTRIBUTION SNAKE)
     </text>
 
-    <!-- 卡片 1：ikuuu_checkIn -->
-    <g transform="translate(0, 32)">
-      <rect width="425" height="135" rx="14" fill="#ffffff" fill-opacity="0.9" filter="url(#cardShadow)"/>
-      <g transform="translate(24, 34)" filter="url(#textHalo)">
-        <text font-family="-apple-system, sans-serif" font-size="22" font-weight="900" fill="#0284c7">
-          🚁 ikuuu_checkIn
-        </text>
-        <text x="375" text-anchor="end" font-family="-apple-system, sans-serif" font-size="15" font-weight="800" fill="#d97706">
-          ★ 8 Stars
-        </text>
-        <text y="32" font-family="-apple-system, sans-serif" font-size="15" font-weight="600" fill="#334155">
-          全自动多账号定时签到与推送脚本，
-        </text>
-        <text y="54" font-family="-apple-system, sans-serif" font-size="15" font-weight="600" fill="#334155">
-          深度集成 GitHub Actions 自动化调度。
-        </text>
-        <g transform="translate(0, 70)">
-          <rect width="75" height="26" rx="6" fill="#0284c7" fill-opacity="0.12"/>
-          <text x="14" y="18" font-size="13" font-weight="800" fill="#0284c7">Python</text>
-          <rect x="85" width="85" height="26" rx="6" fill="#10b981" fill-opacity="0.12"/>
-          <text x="96" y="18" font-size="13" font-weight="800" fill="#10b981">Actions</text>
-        </g>
-      </g>
-    </g>
-
-    <!-- 卡片 2：ossimport-Tool -->
-    <g transform="translate(445, 32)">
-      <rect width="425" height="135" rx="14" fill="#ffffff" fill-opacity="0.9" filter="url(#cardShadow)"/>
-      <g transform="translate(24, 34)" filter="url(#textHalo)">
-        <text font-family="-apple-system, sans-serif" font-size="22" font-weight="900" fill="#0284c7">
-          📦 ossimport-Tool
-        </text>
-        <text x="375" text-anchor="end" font-family="-apple-system, sans-serif" font-size="15" font-weight="700" fill="#475569">
-          Shell / OSS
-        </text>
-        <text y="32" font-family="-apple-system, sans-serif" font-size="15" font-weight="600" fill="#334155">
-          海量对象存储数据自动化迁移工具，
-        </text>
-        <text y="54" font-family="-apple-system, sans-serif" font-size="15" font-weight="600" fill="#334155">
-          专为高速断点续传与多云数据流转打造。
-        </text>
-        <g transform="translate(0, 70)">
-          <rect width="68" height="26" rx="6" fill="#16a34a" fill-opacity="0.12"/>
-          <text x="15" y="18" font-size="13" font-weight="800" fill="#16a34a">Shell</text>
-          <rect x="78" width="98" height="26" rx="6" fill="#8b5cf6" fill-opacity="0.12"/>
-          <text x="89" y="18" font-size="13" font-weight="800" fill="#8b5cf6">Cloud OSS</text>
-        </g>
-      </g>
+    <!-- 贪吃蛇展示卡片（无边框，极度透光，流光直接贯穿贪吃蛇） -->
+    <g transform="translate(0, 30)">
+      <rect width="870" height="190" rx="16" fill="#ffffff" fill-opacity="0.88" filter="url(#cardShadow)"/>
+      
+      <!-- 嵌套动态贪吃蛇 SVG (直接运行动画，与流光浑然一体) -->
+      <svg x="5" y="0" width="860" height="190" viewBox="-16 -32 880 192">
+        <desc>Generated with https://github.com/Platane/snk</desc><style>:root{--cb:#1b1f230a;--cs:#0284c7;--ce:#f1f5f9;--c0:#f1f5f9;--c1:#bae6fd;--c2:#38bdf8;--c3:#818cf8;--c4:#a855f7}.c{shape-rendering:geometricPrecision;fill:var(--ce);stroke-width:1px;stroke:var(--cb);animation:none 12300ms linear infinite;width:12px;height:12px}@keyframes c0{29.26%{fill:var(--c1)}29.28%,100%{fill:var(--ce)}}.c.c0{fill:var(--c1);animation-name:c0}@keyframes c1{52.02%{fill:var(--c2)}52.04%,100%{fill:var(--ce)}}.c.c1{fill:var(--c2);animation-name:c1}@keyframes c2{47.96%{fill:var(--c1)}47.98%,100%{fill:var(--ce)}}.c.c2{fill:var(--c1);animation-name:c2}@keyframes c3{56.09%{fill:var(--c4)}56.11%,100%{fill:var(--ce)}}.c.c3{fill:var(--c4);animation-name:c3}@keyframes c4{48.77%{fill:var(--c1)}48.79%,100%{fill:var(--ce)}}.c.c4{fill:var(--c1);animation-name:c4}.u{transform-origin:0 0;transform:scale(0,1);animation:none linear 12300ms infinite}@keyframes u0{29.26%{transform:scale(0.000,1)}29.28%,47.96%{transform:scale(0.333,1)}47.98%,48.77%{transform:scale(0.667,1)}48.79%,100%{transform:scale(1.000,1)}}.u.u0{fill:var(--c1);animation-name:u0;transform-origin:0.0px 0}@keyframes u1{52.02%{transform:scale(0.000,1)}52.04%,100%{transform:scale(1.000,1)}}.u.u1{fill:var(--c2);animation-name:u1;transform-origin:508.8px 0}@keyframes u2{56.09%{transform:scale(0.000,1)}56.11%,100%{transform:scale(1.000,1)}}.u.u2{fill:var(--c4);animation-name:u2;transform-origin:678.4px 0}.s{shape-rendering:geometricPrecision;fill:var(--cs);animation:none linear 12300ms infinite}@keyframes s0{0%,99.19%{transform:translate(0px,-16px)}0.81%{transform:translate(0px,0px)}26.02%{transform:translate(496px,0px)}29.27%{transform:translate(496px,64px)}45.53%{transform:translate(816px,64px)}47.97%{transform:translate(816px,16px)}48.78%{transform:translate(832px,16px)}49.59%{transform:translate(832px,32px)}51.22%{transform:translate(800px,32px)}52.03%{transform:translate(800px,48px)}53.66%{transform:translate(832px,48px)}56.1%{transform:translate(832px,0px)}95.12%{transform:translate(64px,0px)}95.93%{transform:translate(64px,-16px)}}.s.s0{transform:translate(0px,-16px);animation-name:s0}@keyframes s1{0%,99.19%{transform:translate(16px,-16px)}0.81%{transform:translate(0px,-16px)}1.63%{transform:translate(0px,0px)}26.83%{transform:translate(496px,0px)}30.08%{transform:translate(496px,64px)}46.34%{transform:translate(816px,64px)}48.78%{transform:translate(816px,16px)}49.59%{transform:translate(832px,16px)}50.41%{transform:translate(832px,32px)}52.03%{transform:translate(800px,32px)}52.85%{transform:translate(800px,48px)}54.47%{transform:translate(832px,48px)}56.91%{transform:translate(832px,0px)}95.93%{transform:translate(64px,0px)}96.75%{transform:translate(64px,-16px)}}.s.s1{transform:translate(16px,-16px);animation-name:s1}@keyframes s2{0%,99.19%{transform:translate(32px,-16px)}1.63%{transform:translate(0px,-16px)}2.44%{transform:translate(0px,0px)}27.64%{transform:translate(496px,0px)}30.89%{transform:translate(496px,64px)}47.15%{transform:translate(816px,64px)}49.59%{transform:translate(816px,16px)}50.41%{transform:translate(832px,16px)}51.22%{transform:translate(832px,32px)}52.85%{transform:translate(800px,32px)}53.66%{transform:translate(800px,48px)}55.28%{transform:translate(832px,48px)}57.72%{transform:translate(832px,0px)}96.75%{transform:translate(64px,0px)}97.56%{transform:translate(64px,-16px)}}.s.s2{transform:translate(32px,-16px);animation-name:s2}@keyframes s3{0%,99.19%{transform:translate(48px,-16px)}2.44%{transform:translate(0px,-16px)}3.25%{transform:translate(0px,0px)}28.46%{transform:translate(496px,0px)}31.71%{transform:translate(496px,64px)}47.97%{transform:translate(816px,64px)}50.41%{transform:translate(816px,16px)}51.22%{transform:translate(832px,16px)}52.03%{transform:translate(832px,32px)}53.66%{transform:translate(800px,32px)}54.47%{transform:translate(800px,48px)}56.1%{transform:translate(832px,48px)}58.54%{transform:translate(832px,0px)}97.56%{transform:translate(64px,0px)}98.37%{transform:translate(64px,-16px)}}.s.s3{transform:translate(48px,-16px);animation-name:s3}</style><rect class="c" x="2" y="2" rx="2" ry="2"/><rect class="c" x="2" y="18" rx="2" ry="2"/><rect class="c" x="2" y="34" rx="2" ry="2"/><rect class="c" x="2" y="50" rx="2" ry="2"/><rect class="c" x="2" y="66" rx="2" ry="2"/><rect class="c" x="2" y="82" rx="2" ry="2"/><rect class="c" x="2" y="98" rx="2" ry="2"/><rect class="c" x="18" y="2" rx="2" ry="2"/><rect class="c" x="18" y="18" rx="2" ry="2"/><rect class="c" x="18" y="34" rx="2" ry="2"/><rect class="c" x="18" y="50" rx="2" ry="2"/><rect class="c" x="18" y="66" rx="2" ry="2"/><rect class="c" x="18" y="82" rx="2" ry="2"/><rect class="c" x="18" y="98" rx="2" ry="2"/><rect class="c" x="34" y="2" rx="2" ry="2"/><rect class="c" x="34" y="18" rx="2" ry="2"/><rect class="c" x="34" y="34" rx="2" ry="2"/><rect class="c" x="34" y="50" rx="2" ry="2"/><rect class="c" x="34" y="66" rx="2" ry="2"/><rect class="c" x="34" y="82" rx="2" ry="2"/><rect class="c" x="34" y="98" rx="2" ry="2"/><rect class="c" x="50" y="2" rx="2" ry="2"/><rect class="c" x="50" y="18" rx="2" ry="2"/><rect class="c" x="50" y="34" rx="2" ry="2"/><rect class="c" x="50" y="50" rx="2" ry="2"/><rect class="c" x="50" y="66" rx="2" ry="2"/><rect class="c" x="50" y="82" rx="2" ry="2"/><rect class="c" x="50" y="98" rx="2" ry="2"/><rect class="c" x="66" y="2" rx="2" ry="2"/><rect class="c" x="66" y="18" rx="2" ry="2"/><rect class="c" x="66" y="34" rx="2" ry="2"/><rect class="c" x="66" y="50" rx="2" ry="2"/><rect class="c" x="66" y="66" rx="2" ry="2"/><rect class="c" x="66" y="82" rx="2" ry="2"/><rect class="c" x="66" y="98" rx="2" ry="2"/><rect class="c" x="82" y="2" rx="2" ry="2"/><rect class="c" x="82" y="18" rx="2" ry="2"/><rect class="c" x="82" y="34" rx="2" ry="2"/><rect class="c" x="82" y="50" rx="2" ry="2"/><rect class="c" x="82" y="66" rx="2" ry="2"/><rect class="c" x="82" y="82" rx="2" ry="2"/><rect class="c" x="82" y="98" rx="2" ry="2"/><rect class="c" x="98" y="2" rx="2" ry="2"/><rect class="c" x="98" y="18" rx="2" ry="2"/><rect class="c" x="98" y="34" rx="2" ry="2"/><rect class="c" x="98" y="50" rx="2" ry="2"/><rect class="c" x="98" y="66" rx="2" ry="2"/><rect class="c" x="98" y="82" rx="2" ry="2"/><rect class="c" x="98" y="98" rx="2" ry="2"/><rect class="c" x="114" y="2" rx="2" ry="2"/><rect class="c" x="114" y="18" rx="2" ry="2"/><rect class="c" x="114" y="34" rx="2" ry="2"/><rect class="c" x="114" y="50" rx="2" ry="2"/><rect class="c" x="114" y="66" rx="2" ry="2"/><rect class="c" x="114" y="82" rx="2" ry="2"/><rect class="c" x="114" y="98" rx="2" ry="2"/><rect class="c" x="130" y="2" rx="2" ry="2"/><rect class="c" x="130" y="18" rx="2" ry="2"/><rect class="c" x="130" y="34" rx="2" ry="2"/><rect class="c" x="130" y="50" rx="2" ry="2"/><rect class="c" x="130" y="66" rx="2" ry="2"/><rect class="c" x="130" y="82" rx="2" ry="2"/><rect class="c" x="130" y="98" rx="2" ry="2"/><rect class="c" x="146" y="2" rx="2" ry="2"/><rect class="c" x="146" y="18" rx="2" ry="2"/><rect class="c" x="146" y="34" rx="2" ry="2"/><rect class="c" x="146" y="50" rx="2" ry="2"/><rect class="c" x="146" y="66" rx="2" ry="2"/><rect class="c" x="146" y="82" rx="2" ry="2"/><rect class="c" x="146" y="98" rx="2" ry="2"/><rect class="c" x="162" y="2" rx="2" ry="2"/><rect class="c" x="162" y="18" rx="2" ry="2"/><rect class="c" x="162" y="34" rx="2" ry="2"/><rect class="c" x="162" y="50" rx="2" ry="2"/><rect class="c" x="162" y="66" rx="2" ry="2"/><rect class="c" x="162" y="82" rx="2" ry="2"/><rect class="c" x="162" y="98" rx="2" ry="2"/><rect class="c" x="178" y="2" rx="2" ry="2"/><rect class="c" x="178" y="18" rx="2" ry="2"/><rect class="c" x="178" y="34" rx="2" ry="2"/><rect class="c" x="178" y="50" rx="2" ry="2"/><rect class="c" x="178" y="66" rx="2" ry="2"/><rect class="c" x="178" y="82" rx="2" ry="2"/><rect class="c" x="178" y="98" rx="2" ry="2"/><rect class="c" x="194" y="2" rx="2" ry="2"/><rect class="c" x="194" y="18" rx="2" ry="2"/><rect class="c" x="194" y="34" rx="2" ry="2"/><rect class="c" x="194" y="50" rx="2" ry="2"/><rect class="c" x="194" y="66" rx="2" ry="2"/><rect class="c" x="194" y="82" rx="2" ry="2"/><rect class="c" x="194" y="98" rx="2" ry="2"/><rect class="c" x="210" y="2" rx="2" ry="2"/><rect class="c" x="210" y="18" rx="2" ry="2"/><rect class="c" x="210" y="34" rx="2" ry="2"/><rect class="c" x="210" y="50" rx="2" ry="2"/><rect class="c" x="210" y="66" rx="2" ry="2"/><rect class="c" x="210" y="82" rx="2" ry="2"/><rect class="c" x="210" y="98" rx="2" ry="2"/><rect class="c" x="226" y="2" rx="2" ry="2"/><rect class="c" x="226" y="18" rx="2" ry="2"/><rect class="c" x="226" y="34" rx="2" ry="2"/><rect class="c" x="226" y="50" rx="2" ry="2"/><rect class="c" x="226" y="66" rx="2" ry="2"/><rect class="c" x="226" y="82" rx="2" ry="2"/><rect class="c" x="226" y="98" rx="2" ry="2"/><rect class="c" x="242" y="2" rx="2" ry="2"/><rect class="c" x="242" y="18" rx="2" ry="2"/><rect class="c" x="242" y="34" rx="2" ry="2"/><rect class="c" x="242" y="50" rx="2" ry="2"/><rect class="c" x="242" y="66" rx="2" ry="2"/><rect class="c" x="242" y="82" rx="2" ry="2"/><rect class="c" x="242" y="98" rx="2" ry="2"/><rect class="c" x="258" y="2" rx="2" ry="2"/><rect class="c" x="258" y="18" rx="2" ry="2"/><rect class="c" x="258" y="34" rx="2" ry="2"/><rect class="c" x="258" y="50" rx="2" ry="2"/><rect class="c" x="258" y="66" rx="2" ry="2"/><rect class="c" x="258" y="82" rx="2" ry="2"/><rect class="c" x="258" y="98" rx="2" ry="2"/><rect class="c" x="274" y="2" rx="2" ry="2"/><rect class="c" x="274" y="18" rx="2" ry="2"/><rect class="c" x="274" y="34" rx="2" ry="2"/><rect class="c" x="274" y="50" rx="2" ry="2"/><rect class="c" x="274" y="66" rx="2" ry="2"/><rect class="c" x="274" y="82" rx="2" ry="2"/><rect class="c" x="274" y="98" rx="2" ry="2"/><rect class="c" x="290" y="2" rx="2" ry="2"/><rect class="c" x="290" y="18" rx="2" ry="2"/><rect class="c" x="290" y="34" rx="2" ry="2"/><rect class="c" x="290" y="50" rx="2" ry="2"/><rect class="c" x="290" y="66" rx="2" ry="2"/><rect class="c" x="290" y="82" rx="2" ry="2"/><rect class="c" x="290" y="98" rx="2" ry="2"/><rect class="c" x="306" y="2" rx="2" ry="2"/><rect class="c" x="306" y="18" rx="2" ry="2"/><rect class="c" x="306" y="34" rx="2" ry="2"/><rect class="c" x="306" y="50" rx="2" ry="2"/><rect class="c" x="306" y="66" rx="2" ry="2"/><rect class="c" x="306" y="82" rx="2" ry="2"/><rect class="c" x="306" y="98" rx="2" ry="2"/><rect class="c" x="322" y="2" rx="2" ry="2"/><rect class="c" x="322" y="18" rx="2" ry="2"/><rect class="c" x="322" y="34" rx="2" ry="2"/><rect class="c" x="322" y="50" rx="2" ry="2"/><rect class="c" x="322" y="66" rx="2" ry="2"/><rect class="c" x="322" y="82" rx="2" ry="2"/><rect class="c" x="322" y="98" rx="2" ry="2"/><rect class="c" x="338" y="2" rx="2" ry="2"/><rect class="c" x="338" y="18" rx="2" ry="2"/><rect class="c" x="338" y="34" rx="2" ry="2"/><rect class="c" x="338" y="50" rx="2" ry="2"/><rect class="c" x="338" y="66" rx="2" ry="2"/><rect class="c" x="338" y="82" rx="2" ry="2"/><rect class="c" x="338" y="98" rx="2" ry="2"/><rect class="c" x="354" y="2" rx="2" ry="2"/><rect class="c" x="354" y="18" rx="2" ry="2"/><rect class="c" x="354" y="34" rx="2" ry="2"/><rect class="c" x="354" y="50" rx="2" ry="2"/><rect class="c" x="354" y="66" rx="2" ry="2"/><rect class="c" x="354" y="82" rx="2" ry="2"/><rect class="c" x="354" y="98" rx="2" ry="2"/><rect class="c" x="370" y="2" rx="2" ry="2"/><rect class="c" x="370" y="18" rx="2" ry="2"/><rect class="c" x="370" y="34" rx="2" ry="2"/><rect class="c" x="370" y="50" rx="2" ry="2"/><rect class="c" x="370" y="66" rx="2" ry="2"/><rect class="c" x="370" y="82" rx="2" ry="2"/><rect class="c" x="370" y="98" rx="2" ry="2"/><rect class="c" x="386" y="2" rx="2" ry="2"/><rect class="c" x="386" y="18" rx="2" ry="2"/><rect class="c" x="386" y="34" rx="2" ry="2"/><rect class="c" x="386" y="50" rx="2" ry="2"/><rect class="c" x="386" y="66" rx="2" ry="2"/><rect class="c" x="386" y="82" rx="2" ry="2"/><rect class="c" x="386" y="98" rx="2" ry="2"/><rect class="c" x="402" y="2" rx="2" ry="2"/><rect class="c" x="402" y="18" rx="2" ry="2"/><rect class="c" x="402" y="34" rx="2" ry="2"/><rect class="c" x="402" y="50" rx="2" ry="2"/><rect class="c" x="402" y="66" rx="2" ry="2"/><rect class="c" x="402" y="82" rx="2" ry="2"/><rect class="c" x="402" y="98" rx="2" ry="2"/><rect class="c" x="418" y="2" rx="2" ry="2"/><rect class="c" x="418" y="18" rx="2" ry="2"/><rect class="c" x="418" y="34" rx="2" ry="2"/><rect class="c" x="418" y="50" rx="2" ry="2"/><rect class="c" x="418" y="66" rx="2" ry="2"/><rect class="c" x="418" y="82" rx="2" ry="2"/><rect class="c" x="418" y="98" rx="2" ry="2"/><rect class="c" x="434" y="2" rx="2" ry="2"/><rect class="c" x="434" y="18" rx="2" ry="2"/><rect class="c" x="434" y="34" rx="2" ry="2"/><rect class="c" x="434" y="50" rx="2" ry="2"/><rect class="c" x="434" y="66" rx="2" ry="2"/><rect class="c" x="434" y="82" rx="2" ry="2"/><rect class="c" x="434" y="98" rx="2" ry="2"/><rect class="c" x="450" y="2" rx="2" ry="2"/><rect class="c" x="450" y="18" rx="2" ry="2"/><rect class="c" x="450" y="34" rx="2" ry="2"/><rect class="c" x="450" y="50" rx="2" ry="2"/><rect class="c" x="450" y="66" rx="2" ry="2"/><rect class="c" x="450" y="82" rx="2" ry="2"/><rect class="c" x="450" y="98" rx="2" ry="2"/><rect class="c" x="466" y="2" rx="2" ry="2"/><rect class="c" x="466" y="18" rx="2" ry="2"/><rect class="c" x="466" y="34" rx="2" ry="2"/><rect class="c" x="466" y="50" rx="2" ry="2"/><rect class="c" x="466" y="66" rx="2" ry="2"/><rect class="c" x="466" y="82" rx="2" ry="2"/><rect class="c" x="466" y="98" rx="2" ry="2"/><rect class="c" x="482" y="2" rx="2" ry="2"/><rect class="c" x="482" y="18" rx="2" ry="2"/><rect class="c" x="482" y="34" rx="2" ry="2"/><rect class="c" x="482" y="50" rx="2" ry="2"/><rect class="c" x="482" y="66" rx="2" ry="2"/><rect class="c" x="482" y="82" rx="2" ry="2"/><rect class="c" x="482" y="98" rx="2" ry="2"/><rect class="c" x="498" y="2" rx="2" ry="2"/><rect class="c" x="498" y="18" rx="2" ry="2"/><rect class="c" x="498" y="34" rx="2" ry="2"/><rect class="c" x="498" y="50" rx="2" ry="2"/><rect class="c c0" x="498" y="66" rx="2" ry="2"/><rect class="c" x="498" y="82" rx="2" ry="2"/><rect class="c" x="498" y="98" rx="2" ry="2"/><rect class="c" x="514" y="2" rx="2" ry="2"/><rect class="c" x="514" y="18" rx="2" ry="2"/><rect class="c" x="514" y="34" rx="2" ry="2"/><rect class="c" x="514" y="50" rx="2" ry="2"/><rect class="c" x="514" y="66" rx="2" ry="2"/><rect class="c" x="514" y="82" rx="2" ry="2"/><rect class="c" x="514" y="98" rx="2" ry="2"/><rect class="c" x="530" y="2" rx="2" ry="2"/><rect class="c" x="530" y="18" rx="2" ry="2"/><rect class="c" x="530" y="34" rx="2" ry="2"/><rect class="c" x="530" y="50" rx="2" ry="2"/><rect class="c" x="530" y="66" rx="2" ry="2"/><rect class="c" x="530" y="82" rx="2" ry="2"/><rect class="c" x="530" y="98" rx="2" ry="2"/><rect class="c" x="546" y="2" rx="2" ry="2"/><rect class="c" x="546" y="18" rx="2" ry="2"/><rect class="c" x="546" y="34" rx="2" ry="2"/><rect class="c" x="546" y="50" rx="2" ry="2"/><rect class="c" x="546" y="66" rx="2" ry="2"/><rect class="c" x="546" y="82" rx="2" ry="2"/><rect class="c" x="546" y="98" rx="2" ry="2"/><rect class="c" x="562" y="2" rx="2" ry="2"/><rect class="c" x="562" y="18" rx="2" ry="2"/><rect class="c" x="562" y="34" rx="2" ry="2"/><rect class="c" x="562" y="50" rx="2" ry="2"/><rect class="c" x="562" y="66" rx="2" ry="2"/><rect class="c" x="562" y="82" rx="2" ry="2"/><rect class="c" x="562" y="98" rx="2" ry="2"/><rect class="c" x="578" y="2" rx="2" ry="2"/><rect class="c" x="578" y="18" rx="2" ry="2"/><rect class="c" x="578" y="34" rx="2" ry="2"/><rect class="c" x="578" y="50" rx="2" ry="2"/><rect class="c" x="578" y="66" rx="2" ry="2"/><rect class="c" x="578" y="82" rx="2" ry="2"/><rect class="c" x="578" y="98" rx="2" ry="2"/><rect class="c" x="594" y="2" rx="2" ry="2"/><rect class="c" x="594" y="18" rx="2" ry="2"/><rect class="c" x="594" y="34" rx="2" ry="2"/><rect class="c" x="594" y="50" rx="2" ry="2"/><rect class="c" x="594" y="66" rx="2" ry="2"/><rect class="c" x="594" y="82" rx="2" ry="2"/><rect class="c" x="594" y="98" rx="2" ry="2"/><rect class="c" x="610" y="2" rx="2" ry="2"/><rect class="c" x="610" y="18" rx="2" ry="2"/><rect class="c" x="610" y="34" rx="2" ry="2"/><rect class="c" x="610" y="50" rx="2" ry="2"/><rect class="c" x="610" y="66" rx="2" ry="2"/><rect class="c" x="610" y="82" rx="2" ry="2"/><rect class="c" x="610" y="98" rx="2" ry="2"/><rect class="c" x="626" y="2" rx="2" ry="2"/><rect class="c" x="626" y="18" rx="2" ry="2"/><rect class="c" x="626" y="34" rx="2" ry="2"/><rect class="c" x="626" y="50" rx="2" ry="2"/><rect class="c" x="626" y="66" rx="2" ry="2"/><rect class="c" x="626" y="82" rx="2" ry="2"/><rect class="c" x="626" y="98" rx="2" ry="2"/><rect class="c" x="642" y="2" rx="2" ry="2"/><rect class="c" x="642" y="18" rx="2" ry="2"/><rect class="c" x="642" y="34" rx="2" ry="2"/><rect class="c" x="642" y="50" rx="2" ry="2"/><rect class="c" x="642" y="66" rx="2" ry="2"/><rect class="c" x="642" y="82" rx="2" ry="2"/><rect class="c" x="642" y="98" rx="2" ry="2"/><rect class="c" x="658" y="2" rx="2" ry="2"/><rect class="c" x="658" y="18" rx="2" ry="2"/><rect class="c" x="658" y="34" rx="2" ry="2"/><rect class="c" x="658" y="50" rx="2" ry="2"/><rect class="c" x="658" y="66" rx="2" ry="2"/><rect class="c" x="658" y="82" rx="2" ry="2"/><rect class="c" x="658" y="98" rx="2" ry="2"/><rect class="c" x="674" y="2" rx="2" ry="2"/><rect class="c" x="674" y="18" rx="2" ry="2"/><rect class="c" x="674" y="34" rx="2" ry="2"/><rect class="c" x="674" y="50" rx="2" ry="2"/><rect class="c" x="674" y="66" rx="2" ry="2"/><rect class="c" x="674" y="82" rx="2" ry="2"/><rect class="c" x="674" y="98" rx="2" ry="2"/><rect class="c" x="690" y="2" rx="2" ry="2"/><rect class="c" x="690" y="18" rx="2" ry="2"/><rect class="c" x="690" y="34" rx="2" ry="2"/><rect class="c" x="690" y="50" rx="2" ry="2"/><rect class="c" x="690" y="66" rx="2" ry="2"/><rect class="c" x="690" y="82" rx="2" ry="2"/><rect class="c" x="690" y="98" rx="2" ry="2"/><rect class="c" x="706" y="2" rx="2" ry="2"/><rect class="c" x="706" y="18" rx="2" ry="2"/><rect class="c" x="706" y="34" rx="2" ry="2"/><rect class="c" x="706" y="50" rx="2" ry="2"/><rect class="c" x="706" y="66" rx="2" ry="2"/><rect class="c" x="706" y="82" rx="2" ry="2"/><rect class="c" x="706" y="98" rx="2" ry="2"/><rect class="c" x="722" y="2" rx="2" ry="2"/><rect class="c" x="722" y="18" rx="2" ry="2"/><rect class="c" x="722" y="34" rx="2" ry="2"/><rect class="c" x="722" y="50" rx="2" ry="2"/><rect class="c" x="722" y="66" rx="2" ry="2"/><rect class="c" x="722" y="82" rx="2" ry="2"/><rect class="c" x="722" y="98" rx="2" ry="2"/><rect class="c" x="738" y="2" rx="2" ry="2"/><rect class="c" x="738" y="18" rx="2" ry="2"/><rect class="c" x="738" y="34" rx="2" ry="2"/><rect class="c" x="738" y="50" rx="2" ry="2"/><rect class="c" x="738" y="66" rx="2" ry="2"/><rect class="c" x="738" y="82" rx="2" ry="2"/><rect class="c" x="738" y="98" rx="2" ry="2"/><rect class="c" x="754" y="2" rx="2" ry="2"/><rect class="c" x="754" y="18" rx="2" ry="2"/><rect class="c" x="754" y="34" rx="2" ry="2"/><rect class="c" x="754" y="50" rx="2" ry="2"/><rect class="c" x="754" y="66" rx="2" ry="2"/><rect class="c" x="754" y="82" rx="2" ry="2"/><rect class="c" x="754" y="98" rx="2" ry="2"/><rect class="c" x="770" y="2" rx="2" ry="2"/><rect class="c" x="770" y="18" rx="2" ry="2"/><rect class="c" x="770" y="34" rx="2" ry="2"/><rect class="c" x="770" y="50" rx="2" ry="2"/><rect class="c" x="770" y="66" rx="2" ry="2"/><rect class="c" x="770" y="82" rx="2" ry="2"/><rect class="c" x="770" y="98" rx="2" ry="2"/><rect class="c" x="786" y="2" rx="2" ry="2"/><rect class="c" x="786" y="18" rx="2" ry="2"/><rect class="c" x="786" y="34" rx="2" ry="2"/><rect class="c" x="786" y="50" rx="2" ry="2"/><rect class="c" x="786" y="66" rx="2" ry="2"/><rect class="c" x="786" y="82" rx="2" ry="2"/><rect class="c" x="786" y="98" rx="2" ry="2"/><rect class="c" x="802" y="2" rx="2" ry="2"/><rect class="c" x="802" y="18" rx="2" ry="2"/><rect class="c" x="802" y="34" rx="2" ry="2"/><rect class="c c1" x="802" y="50" rx="2" ry="2"/><rect class="c" x="802" y="66" rx="2" ry="2"/><rect class="c" x="802" y="82" rx="2" ry="2"/><rect class="c" x="802" y="98" rx="2" ry="2"/><rect class="c" x="818" y="2" rx="2" ry="2"/><rect class="c c2" x="818" y="18" rx="2" ry="2"/><rect class="c" x="818" y="34" rx="2" ry="2"/><rect class="c" x="818" y="50" rx="2" ry="2"/><rect class="c" x="818" y="66" rx="2" ry="2"/><rect class="c" x="818" y="82" rx="2" ry="2"/><rect class="c" x="818" y="98" rx="2" ry="2"/><rect class="c c3" x="834" y="2" rx="2" ry="2"/><rect class="c c4" x="834" y="18" rx="2" ry="2"/><rect class="u u0" height="12" width="509.4" x="0.0" y="144"/><rect class="u u1" height="12" width="170.2" x="508.8" y="144"/><rect class="u u2" height="12" width="170.2" x="678.4" y="144"/><rect class="s s0" x="0.8" y="0.8" width="14.4" height="14.4" rx="4.5" ry="4.5"/><rect class="s s1" x="1.8" y="1.8" width="12.3" height="12.3" rx="4.1" ry="4.1"/><rect class="s s2" x="2.6" y="2.6" width="10.8" height="10.8" rx="3.6" ry="3.6"/><rect class="s s3" x="3.0" y="3.0" width="9.9" height="9.9" rx="3.3" ry="3.3"/>
+      </svg>
     </g>
   </g>
 

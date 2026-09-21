@@ -26,8 +26,24 @@ jobs:
           outputs: |
             assets/github-contribution-grid-snake.svg?color_snake=#0284c7&color_dots=#f1f5f9,#bae6fd,#38bdf8,#818cf8,#a855f7
 
-      - name: Commit & Push Snake SVG
+      - name: Update Lightfall Banner with New Snake Grid
+        run: |
+          python -c "
+          snake = open('assets/github-contribution-grid-snake.svg', encoding='utf-8').read()
+          start_s = snake.find('>') + 1
+          end_s = snake.rfind('</svg>')
+          snake_inner = snake[start_s:end_s]
+          banner = open('assets/lightfall-banner.svg', encoding='utf-8').read()
+          tag_start = banner.find('<svg x=\"5\" y=\"0\"')
+          if tag_start != -1:
+              tag_inner_start = banner.find('>', tag_start) + 1
+              tag_end = banner.find('</svg>', tag_inner_start)
+              new_banner = banner[:tag_inner_start] + snake_inner + banner[tag_end:]
+              open('assets/lightfall-banner.svg', 'w', encoding='utf-8').write(new_banner)
+          "
+
+      - name: Commit & Push Assets
         uses: EndBug/add-and-commit@v9
         with:
-          message: 'chore: auto update contribution snake [skip ci]'
+          message: 'chore: auto update contribution snake in lightfall banner [skip ci]'
           add: 'assets/*.svg'
