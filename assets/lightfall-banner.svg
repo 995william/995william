@@ -1,48 +1,16 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 960" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 880" width="100%" height="100%">
   <defs>
-    <!-- 极淡透光背景网格 (仅有微弱坐标点与虚线，95%以上完全透视) -->
-    <pattern id="techGrid" width="40" height="40" patternUnits="userSpaceOnUse">
-      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#e2e8f0" stroke-width="0.5" stroke-dasharray="2 4"/>
-      <circle cx="0" cy="0" r="1" fill="#cbd5e1" fill-opacity="0.6"/>
-    </pattern>
-
-    <!-- 柔和局部微光（仅给文字微弱烘托，流光直接贯穿整个背景） -->
-    <radialGradient id="softGlow" cx="50%" cy="15%" r="40%">
-      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.65"/>
+    <!-- 柔和微光渐变（无边框，极度通透） -->
+    <radialGradient id="softGlow" cx="50%" cy="12%" r="50%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.8"/>
       <stop offset="60%" stop-color="#ffffff" stop-opacity="0.2"/>
       <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
     </radialGradient>
 
-    <!-- Lightfall 全屏流光色彩系 (电光青、赛博紫、翡翠绿、炫彩粉、琥珀金) -->
-    <linearGradient id="streamCyan" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0"/>
-      <stop offset="70%" stop-color="#00f0ff" stop-opacity="0.9"/>
-      <stop offset="100%" stop-color="#38bdf8" stop-opacity="1"/>
-    </linearGradient>
-
-    <linearGradient id="streamPurple" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0"/>
-      <stop offset="70%" stop-color="#a855f7" stop-opacity="0.9"/>
-      <stop offset="100%" stop-color="#c084fc" stop-opacity="1"/>
-    </linearGradient>
-
-    <linearGradient id="streamEmerald" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#10b981" stop-opacity="0"/>
-      <stop offset="70%" stop-color="#34d399" stop-opacity="0.9"/>
-      <stop offset="100%" stop-color="#6ee7b7" stop-opacity="1"/>
-    </linearGradient>
-
-    <linearGradient id="streamPink" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#ec4899" stop-opacity="0"/>
-      <stop offset="70%" stop-color="#f472b6" stop-opacity="0.9"/>
-      <stop offset="100%" stop-color="#fb7185" stop-opacity="1"/>
-    </linearGradient>
-
-    <linearGradient id="streamAmber" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0"/>
-      <stop offset="70%" stop-color="#fbbf24" stop-opacity="0.9"/>
-      <stop offset="100%" stop-color="#fde047" stop-opacity="1"/>
-    </linearGradient>
+    <!-- 卡片无边框柔和立体投影 -->
+    <filter id="softShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="6" stdDeviation="12" flood-color="#0f172a" flood-opacity="0.06"/>
+    </filter>
 
     <!-- 粒子辉光滤镜 -->
     <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
@@ -53,17 +21,48 @@
       </feMerge>
     </filter>
 
-    <!-- 文本发光投影：确保文字直接浮在流光雨上方时依然 100% 锐利可读 -->
-    <filter id="textGlow" x="-20%" y="-20%" width="140%" height="140%">
-      <feDropShadow dx="0" dy="1.5" stdDeviation="3.5" flood-color="#ffffff" flood-opacity="0.95"/>
+    <!-- 文字发光投影：保障流光掠过文字时字字清晰如雕刻 -->
+    <filter id="textHalo" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="1" stdDeviation="3" flood-color="#ffffff" flood-opacity="0.95"/>
     </filter>
+
+    <!-- Lightfall 流光束渐变 -->
+    <linearGradient id="streamCyan" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0"/>
+      <stop offset="70%" stop-color="#00f0ff" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="1"/>
+    </linearGradient>
+
+    <linearGradient id="streamPurple" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0"/>
+      <stop offset="70%" stop-color="#a855f7" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#c084fc" stop-opacity="1"/>
+    </linearGradient>
+
+    <linearGradient id="streamEmerald" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#10b981" stop-opacity="0"/>
+      <stop offset="70%" stop-color="#34d399" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#6ee7b7" stop-opacity="1"/>
+    </linearGradient>
+
+    <linearGradient id="streamPink" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ec4899" stop-opacity="0"/>
+      <stop offset="70%" stop-color="#f472b6" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#fb7185" stop-opacity="1"/>
+    </linearGradient>
+
+    <linearGradient id="streamAmber" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0"/>
+      <stop offset="70%" stop-color="#fbbf24" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#fde047" stop-opacity="1"/>
+    </linearGradient>
   </defs>
 
   <style>
-    /* 核心动画：流光束纵贯全屏（从 0px 至 960px+）自由倾泻下落 */
+    /* 垂直下落流光动画：全篇 880px 纵贯无缝循环 */
     @keyframes lightfall {
       0% {
-        transform: translateY(-280px);
+        transform: translateY(-240px);
         opacity: 0;
       }
       10% {
@@ -73,7 +72,7 @@
         opacity: 0.95;
       }
       100% {
-        transform: translateY(1050px);
+        transform: translateY(980px);
         opacity: 0;
       }
     }
@@ -93,31 +92,24 @@
       animation: lightfall linear infinite;
     }
 
-    /* 各流光柱交错分布的速度与延时 */
-    .b-1  { animation-duration: 3.8s; animation-delay: 0.0s; }
-    .b-2  { animation-duration: 5.2s; animation-delay: 1.2s; }
-    .b-3  { animation-duration: 3.4s; animation-delay: 0.5s; }
-    .b-4  { animation-duration: 5.8s; animation-delay: 2.1s; }
-    .b-5  { animation-duration: 4.2s; animation-delay: 1.7s; }
-    .b-6  { animation-duration: 4.6s; animation-delay: 0.3s; }
-    .b-7  { animation-duration: 3.2s; animation-delay: 2.0s; }
-    .b-8  { animation-duration: 5.4s; animation-delay: 2.7s; }
-    .b-9  { animation-duration: 4.4s; animation-delay: 0.9s; }
-    .b-10 { animation-duration: 3.7s; animation-delay: 2.4s; }
-    .b-11 { animation-duration: 4.9s; animation-delay: 1.4s; }
-    .b-12 { animation-duration: 4.0s; animation-delay: 3.1s; }
-    .b-13 { animation-duration: 3.5s; animation-delay: 0.7s; }
-    .b-14 { animation-duration: 5.1s; animation-delay: 1.8s; }
-    .b-15 { animation-duration: 3.9s; animation-delay: 0.2s; }
-    .b-16 { animation-duration: 5.5s; animation-delay: 2.5s; }
-    .b-17 { animation-duration: 4.3s; animation-delay: 1.1s; }
-    .b-18 { animation-duration: 3.6s; animation-delay: 2.2s; }
-    .b-19 { animation-duration: 4.8s; animation-delay: 0.6s; }
-    .b-20 { animation-duration: 4.1s; animation-delay: 2.9s; }
-    .b-21 { animation-duration: 3.3s; animation-delay: 1.6s; }
-    .b-22 { animation-duration: 5.0s; animation-delay: 0.4s; }
-    .b-23 { animation-duration: 4.5s; animation-delay: 2.8s; }
-    .b-24 { animation-duration: 3.8s; animation-delay: 1.3s; }
+    .b-1  { animation-duration: 3.6s; animation-delay: 0.0s; }
+    .b-2  { animation-duration: 4.8s; animation-delay: 1.2s; }
+    .b-3  { animation-duration: 3.2s; animation-delay: 0.4s; }
+    .b-4  { animation-duration: 5.4s; animation-delay: 2.0s; }
+    .b-5  { animation-duration: 4.0s; animation-delay: 1.5s; }
+    .b-6  { animation-duration: 4.4s; animation-delay: 0.2s; }
+    .b-7  { animation-duration: 3.0s; animation-delay: 1.8s; }
+    .b-8  { animation-duration: 5.0s; animation-delay: 2.5s; }
+    .b-9  { animation-duration: 4.2s; animation-delay: 0.8s; }
+    .b-10 { animation-duration: 3.5s; animation-delay: 2.2s; }
+    .b-11 { animation-duration: 4.6s; animation-delay: 1.3s; }
+    .b-12 { animation-duration: 3.8s; animation-delay: 2.8s; }
+    .b-13 { animation-duration: 3.3s; animation-delay: 0.6s; }
+    .b-14 { animation-duration: 4.9s; animation-delay: 1.7s; }
+    .b-15 { animation-duration: 3.7s; animation-delay: 0.1s; }
+    .b-16 { animation-duration: 5.2s; animation-delay: 2.4s; }
+    .b-17 { animation-duration: 4.1s; animation-delay: 1.0s; }
+    .b-18 { animation-duration: 3.4s; animation-delay: 2.1s; }
 
     .glow-dot {
       animation: pulseGlow 2s ease-in-out infinite;
@@ -127,245 +119,224 @@
     }
   </style>
 
-  <!-- 1. 全篇 README 透光底层（无任何遮挡，仅有极轻微的未来感网格点） -->
-  <rect width="100%" height="100%" rx="20" fill="#f8fafc" fill-opacity="0.25"/>
-  <rect width="100%" height="100%" rx="20" fill="url(#techGrid)"/>
-  <rect width="100%" height="100%" rx="20" fill="none" stroke="#e2e8f0" stroke-width="1.5"/>
+  <!-- 1. 无任何边框的通透底层 -->
+  <rect width="100%" height="100%" fill="none"/>
 
-  <!-- 2. 贯穿全篇 README（从顶到底 960px）的 Lightfall 流光雨层 -->
-  <g id="lightfall-full-streams">
-    <g class="beam b-1"><rect x="35" y="0" width="2" height="180" rx="1" fill="url(#streamCyan)" filter="url(#glow)"/><circle cx="36" cy="180" r="2.5" fill="#00f0ff"/></g>
-    <g class="beam b-2"><rect x="85" y="0" width="3" height="220" rx="1.5" fill="url(#streamPurple)" filter="url(#glow)"/><circle cx="86.5" cy="220" r="3" fill="#c084fc"/></g>
-    <g class="beam b-3"><rect x="135" y="0" width="1.5" height="140" rx="0.75" fill="url(#streamEmerald)"/><circle cx="135.75" cy="140" r="2" fill="#34d399"/></g>
-    <g class="beam b-4"><rect x="190" y="0" width="2.5" height="200" rx="1.25" fill="url(#streamPink)" filter="url(#glow)"/><circle cx="191.25" cy="200" r="2.5" fill="#fb7185"/></g>
-    <g class="beam b-5"><rect x="245" y="0" width="2" height="160" rx="1" fill="url(#streamCyan)"/><circle cx="246" cy="160" r="2" fill="#00f0ff"/></g>
-    <g class="beam b-6"><rect x="300" y="0" width="3.5" height="230" rx="1.75" fill="url(#streamPurple)" filter="url(#glow)"/><circle cx="301.75" cy="230" r="3.5" fill="#a855f7"/></g>
-    <g class="beam b-7"><rect x="360" y="0" width="1.5" height="150" rx="0.75" fill="url(#streamAmber)"/><circle cx="360.75" cy="150" r="2" fill="#f59e0b"/></g>
-    <g class="beam b-8"><rect x="420" y="0" width="2.5" height="210" rx="1.25" fill="url(#streamEmerald)" filter="url(#glow)"/><circle cx="421.25" cy="210" r="2.5" fill="#10b981"/></g>
-    <g class="beam b-9"><rect x="480" y="0" width="2" height="170" rx="1" fill="url(#streamCyan)"/><circle cx="481" cy="170" r="2" fill="#38bdf8"/></g>
+  <!-- 2. 贯穿全篇（880px 高度）的 Lightfall 垂直流光雨 -->
+  <g id="lightfall-streams">
+    <g class="beam b-1"><rect x="30" y="0" width="2.5" height="180" rx="1.25" fill="url(#streamCyan)" filter="url(#glow)"/><circle cx="31.25" cy="180" r="3" fill="#00f0ff"/></g>
+    <g class="beam b-2"><rect x="80" y="0" width="3.5" height="220" rx="1.75" fill="url(#streamPurple)" filter="url(#glow)"/><circle cx="81.75" cy="220" r="3.5" fill="#c084fc"/></g>
+    <g class="beam b-3"><rect x="130" y="0" width="2" height="150" rx="1" fill="url(#streamEmerald)"/><circle cx="131" cy="150" r="2.5" fill="#34d399"/></g>
+    <g class="beam b-4"><rect x="185" y="0" width="3" height="200" rx="1.5" fill="url(#streamPink)" filter="url(#glow)"/><circle cx="186.5" cy="200" r="3" fill="#fb7185"/></g>
+    <g class="beam b-5"><rect x="240" y="0" width="2.5" height="170" rx="1.25" fill="url(#streamCyan)"/><circle cx="241.25" cy="170" r="2.5" fill="#00f0ff"/></g>
+    <g class="beam b-6"><rect x="300" y="0" width="4" height="230" rx="2" fill="url(#streamPurple)" filter="url(#glow)"/><circle cx="302" cy="230" r="4" fill="#a855f7"/></g>
+    <g class="beam b-7"><rect x="360" y="0" width="2" height="160" rx="1" fill="url(#streamAmber)"/><circle cx="361" cy="160" r="2.5" fill="#f59e0b"/></g>
+    <g class="beam b-8"><rect x="420" y="0" width="3" height="210" rx="1.5" fill="url(#streamEmerald)" filter="url(#glow)"/><circle cx="421.5" cy="210" r="3" fill="#10b981"/></g>
     
-    <!-- 穿过中间终端的流光 -->
-    <g class="beam b-10"><rect x="540" y="0" width="3" height="220" rx="1.5" fill="url(#streamPurple)" filter="url(#glow)"/><circle cx="541.5" cy="220" r="3" fill="#c084fc"/></g>
-    <g class="beam b-11"><rect x="600" y="0" width="2.5" height="180" rx="1.25" fill="url(#streamCyan)" filter="url(#glow)"/><circle cx="601.25" cy="180" r="2.5" fill="#00f0ff"/></g>
-    <g class="beam b-12"><rect x="660" y="0" width="2" height="190" rx="1" fill="url(#streamPink)"/><circle cx="661" cy="190" r="2" fill="#f472b6"/></g>
-    <g class="beam b-13"><rect x="720" y="0" width="3" height="240" rx="1.5" fill="url(#streamPurple)" filter="url(#glow)"/><circle cx="721.5" cy="240" r="3" fill="#a855f7"/></g>
-    <g class="beam b-14"><rect x="780" y="0" width="1.5" height="150" rx="0.75" fill="url(#streamEmerald)"/><circle cx="780.75" cy="150" r="2" fill="#34d399"/></g>
-    <g class="beam b-15"><rect x="840" y="0" width="2.5" height="200" rx="1.25" fill="url(#streamCyan)" filter="url(#glow)"/><circle cx="841.25" cy="200" r="2.5" fill="#00f0ff"/></g>
-    <g class="beam b-16"><rect x="900" y="0" width="2" height="170" rx="1" fill="url(#streamAmber)"/><circle cx="901" cy="170" r="2" fill="#fbbf24"/></g>
-    <g class="beam b-17"><rect x="960" y="0" width="3.5" height="230" rx="1.75" fill="url(#streamPurple)" filter="url(#glow)"/><circle cx="961.75" cy="230" r="3.5" fill="#c084fc"/></g>
-    <g class="beam b-18"><rect x="1015" y="0" width="1.5" height="140" rx="0.75" fill="url(#streamEmerald)"/><circle cx="1015.75" cy="140" r="2" fill="#10b981"/></g>
-    <g class="beam b-19"><rect x="1070" y="0" width="2.5" height="190" rx="1.25" fill="url(#streamPink)" filter="url(#glow)"/><circle cx="1071.25" cy="190" r="2.5" fill="#fb7185"/></g>
-    <g class="beam b-20"><rect x="1120" y="0" width="2" height="160" rx="1" fill="url(#streamCyan)" filter="url(#glow)"/><circle cx="1121" cy="160" r="2" fill="#38bdf8"/></g>
-    <g class="beam b-21"><rect x="1165" y="0" width="2.5" height="180" rx="1.25" fill="url(#streamAmber)"/><circle cx="1166.25" cy="180" r="2" fill="#f59e0b"/></g>
+    <!-- 穿过中间区域的流光束 -->
+    <g class="beam b-9"><rect x="480" y="0" width="2.5" height="170" rx="1.25" fill="url(#streamCyan)"/><circle cx="481.25" cy="170" r="2.5" fill="#38bdf8"/></g>
+    <g class="beam b-10"><rect x="540" y="0" width="3.5" height="220" rx="1.75" fill="url(#streamPurple)" filter="url(#glow)"/><circle cx="541.75" cy="220" r="3.5" fill="#c084fc"/></g>
+    <g class="beam b-11"><rect x="600" y="0" width="3" height="190" rx="1.5" fill="url(#streamCyan)" filter="url(#glow)"/><circle cx="601.5" cy="190" r="3" fill="#00f0ff"/></g>
+    <g class="beam b-12"><rect x="655" y="0" width="2" height="180" rx="1" fill="url(#streamPink)"/><circle cx="656" cy="180" r="2.5" fill="#f472b6"/></g>
+    <g class="beam b-13"><rect x="710" y="0" width="3.5" height="240" rx="1.75" fill="url(#streamPurple)" filter="url(#glow)"/><circle cx="711.75" cy="240" r="3.5" fill="#a855f7"/></g>
+    <g class="beam b-14"><rect x="765" y="0" width="2" height="160" rx="1" fill="url(#streamEmerald)"/><circle cx="766" cy="160" r="2.5" fill="#34d399"/></g>
+    <g class="beam b-15"><rect x="815" y="0" width="3" height="210" rx="1.5" fill="url(#streamCyan)" filter="url(#glow)"/><circle cx="816.5" cy="210" r="3" fill="#00f0ff"/></g>
+    <g class="beam b-16"><rect x="855" y="0" width="2.5" height="180" rx="1.25" fill="url(#streamAmber)"/><circle cx="856.25" cy="180" r="2.5" fill="#fbbf24"/></g>
   </g>
 
-  <!-- 3. 四角 HUD 极客定位角标 -->
-  <g stroke="#94a3b8" stroke-width="1.5" fill="none">
-    <path d="M 25 45 L 25 25 L 45 25"/>
-    <path d="M 1155 25 L 1175 25 L 1175 45"/>
-    <path d="M 25 915 L 25 935 L 45 935"/>
-    <path d="M 1155 935 L 1175 935 L 1175 915"/>
-  </g>
-
-  <!-- ==================== 区域 1：头部核心标识 (全透明，流光穿梭) ==================== -->
+  <!-- ==================== 区域 1：头部核心标识 (放大、高对比度、无边框) ==================== -->
   <g id="header-section">
-    <!-- 状态指示条 -->
-    <g transform="translate(425, 35)">
-      <rect width="350" height="30" rx="15" fill="#ffffff" fill-opacity="0.75" stroke="#cbd5e1" stroke-width="1"/>
-      <circle cx="18" cy="15" r="4.5" fill="#10b981" class="glow-dot"/>
-      <text x="32" y="19" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700" fill="#334155" letter-spacing="1">
-        LIGHTFALL ACTIVE // FULL BACKGROUND
+    <!-- 状态指示条（无边框，纯白半透明软胶囊） -->
+    <g transform="translate(280, 25)">
+      <rect width="320" height="32" rx="16" fill="#ffffff" fill-opacity="0.88" filter="url(#softShadow)"/>
+      <circle cx="20" cy="16" r="5" fill="#10b981" class="glow-dot"/>
+      <text x="36" y="21" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="800" fill="#1e293b" letter-spacing="1">
+        LIGHTFALL // FULL BACKGROUND
       </text>
     </g>
 
-    <!-- 主标题 -->
-    <g transform="translate(600, 115)" text-anchor="middle" filter="url(#textGlow)">
-      <text font-family="'JetBrains Mono', 'Fira Code', -apple-system, sans-serif" font-size="42" font-weight="900" fill="#0f172a" letter-spacing="1">
-        Hi, I'm <tspan fill="#0284c7">Mr-吴</tspan> (995william) <tspan font-size="32">⚡</tspan>
+    <!-- 主标题 (大字重、大字号 42px，清晰醒目) -->
+    <g transform="translate(440, 105)" text-anchor="middle" filter="url(#textHalo)">
+      <text font-family="'JetBrains Mono', 'Fira Code', -apple-system, sans-serif" font-size="42" font-weight="900" fill="#0f172a" letter-spacing="0.5">
+        Hi, I'm <tspan fill="#0284c7">Mr-吴</tspan> (995william) <tspan font-size="34">⚡</tspan>
       </text>
     </g>
 
-    <!-- 副标题 -->
-    <g transform="translate(600, 155)" text-anchor="middle" filter="url(#textGlow)">
-      <text font-family="'JetBrains Mono', 'Fira Code', monospace" font-size="15" font-weight="600" fill="#475569">
-        Full-Stack Freelance Developer <tspan fill="#8b5cf6">·</tspan> Python/Java Automations <tspan fill="#8b5cf6">·</tspan> Since 2018
+    <!-- 职业副标题 (清晰深色字号 17px) -->
+    <g transform="translate(440, 145)" text-anchor="middle" filter="url(#textHalo)">
+      <text font-family="'JetBrains Mono', 'Fira Code', -apple-system, monospace" font-size="17" font-weight="700" fill="#1e293b">
+        全栈自由开发工程师 <tspan fill="#8b5cf6">·</tspan> 自动化脚本与运维专精 <tspan fill="#8b5cf6">·</tspan> 2018 至今
       </text>
     </g>
 
-    <!-- 终端属性修饰 -->
-    <g transform="translate(600, 190)" text-anchor="middle" filter="url(#textGlow)">
-      <text font-family="'JetBrains Mono', 'Fira Code', monospace" font-size="12" fill="#64748b">
-        <tspan fill="#10b981" font-weight="700">➜</tspan> <tspan fill="#0284c7">mode</tspan>: Remote/Freelance <tspan fill="#cbd5e1">|</tspan> <tspan fill="#0284c7">stack</tspan>: Java + Python + Vue <tspan fill="#cbd5e1">|</tspan> <tspan fill="#0284c7">creed</tspan>: Tabs &gt; Spaces <tspan fill="#0284c7" class="cursor">_</tspan>
+    <!-- 属性标签 (字号 14px 加粗，深色对比度) -->
+    <g transform="translate(440, 180)" text-anchor="middle" filter="url(#textHalo)">
+      <text font-family="'JetBrains Mono', 'Fira Code', monospace" font-size="14" font-weight="600" fill="#334155">
+        <tspan fill="#10b981" font-weight="800">➜</tspan> <tspan fill="#0284c7">坐标</tspan>: 远程/自由职业 <tspan fill="#94a3b8">|</tspan> <tspan fill="#0284c7">核心技术</tspan>: Java + Python + Vue <tspan fill="#94a3b8">|</tspan> <tspan fill="#0284c7">信仰</tspan>: Tabs &gt; Spaces <tspan fill="#0284c7" class="cursor">_</tspan>
       </text>
     </g>
   </g>
 
-  <!-- ==================== 区域 2：全透明 macOS 终端命令行卡片 (流光直接穿透代码行) ==================== -->
-  <g id="terminal-section" transform="translate(80, 220)">
-    <!-- 终端窗口外壳（完全透明磨砂感，无遮挡） -->
-    <rect width="1040" height="230" rx="14" fill="#ffffff" fill-opacity="0.38" stroke="#cbd5e1" stroke-width="1.2" filter="drop-shadow(0 8px 16px rgba(15, 23, 42, 0.04))"/>
+  <!-- ==================== 区域 2：macOS 终端命令行窗口 (完全移除外边框，大字体 15px-17px) ==================== -->
+  <g id="terminal-section" transform="translate(30, 210)">
+    <!-- 终端外壳（无边框，极简半透明磨砂白，立体轻投影） -->
+    <rect width="820" height="240" rx="16" fill="#ffffff" fill-opacity="0.82" filter="url(#softShadow)"/>
     
-    <!-- 终端顶部标题栏 (半透光) -->
-    <path d="M 0 14 Q 0 0 14 0 L 1026 0 Q 1040 0 1040 14 L 1040 36 L 0 36 Z" fill="#ffffff" fill-opacity="0.6" stroke="#e2e8f0" stroke-width="1"/>
-    <!-- macOS 红黄绿圆点 -->
-    <circle cx="22" cy="18" r="5" fill="#ff5f56"/>
-    <circle cx="38" cy="18" r="5" fill="#ffbd2e"/>
-    <circle cx="54" cy="18" r="5" fill="#27c93f"/>
-    <!-- 窗口标题 -->
-    <text x="520" y="22" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="600" fill="#64748b">
-      user@995william:~ (zsh) — lightfall stream mode
+    <!-- 顶部圆点栏 -->
+    <circle cx="26" cy="20" r="6" fill="#ff5f56"/>
+    <circle cx="44" cy="20" r="6" fill="#ffbd2e"/>
+    <circle cx="62" cy="20" r="6" fill="#27c93f"/>
+    <text x="410" y="24" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="700" fill="#475569">
+      user@995william:~ (zsh)
     </text>
 
-    <!-- 终端内容文本 (带微光投影，流光在文字后方倾泻，极为酷炫) -->
-    <g transform="translate(30, 65)" font-family="'JetBrains Mono', 'Fira Code', monospace" font-size="12" filter="url(#textGlow)">
-      <!-- whoami 命令 -->
+    <!-- 终端代码内容 (字体由 11px 大幅提升至 15px-17px，字重加粗，极度清晰) -->
+    <g transform="translate(28, 62)" font-family="'JetBrains Mono', 'Fira Code', monospace" font-size="15" filter="url(#textHalo)">
+      <!-- whoami -->
       <text y="0">
-        <tspan fill="#10b981" font-weight="700">➜</tspan> <tspan fill="#0284c7">~</tspan> <tspan fill="#0f172a" font-weight="700">whoami</tspan>
+        <tspan fill="#10b981" font-weight="800">➜</tspan> <tspan fill="#0284c7" font-weight="700">~</tspan> <tspan fill="#0f172a" font-weight="800">whoami</tspan>
       </text>
-      <text y="24" fill="#475569" font-weight="500">
-        Mr-吴 · 全栈自由开发工程师 👨‍💻 (2018年至今)，专精于自动化脚本、爬虫逆向、高可用系统交付与云原生应用。
+      <text y="26" fill="#1e293b" font-weight="600">
+        Mr-吴 · 全栈自由开发工程师 👨‍💻 (专注自动化任务、逆向爬虫、云原生系统交付)
       </text>
 
-      <!-- cat current_focus.json 命令 -->
-      <text y="58">
-        <tspan fill="#10b981" font-weight="700">➜</tspan> <tspan fill="#0284c7">~</tspan> <tspan fill="#0f172a" font-weight="700">cat current_focus.json</tspan>
+      <!-- cat current_focus.json -->
+      <text y="62">
+        <tspan fill="#10b981" font-weight="800">➜</tspan> <tspan fill="#0284c7" font-weight="700">~</tspan> <tspan fill="#0f172a" font-weight="800">cat current_focus.json</tspan>
       </text>
-      <text y="82" fill="#64748b">{</text>
-      <text y="104" fill="#64748b">  "work_mode": <tspan fill="#0284c7">"Full-Time Remote / Available for Freelance"</tspan>,</text>
-      <text y="126" fill="#64748b">  "core_stack": [<tspan fill="#10b981">"Java (Spring Boot)"</tspan>, <tspan fill="#10b981">"Python (Flask)"</tspan>, <tspan fill="#10b981">"Vue.js 3"</tspan>, <tspan fill="#10b981">"Docker"</tspan>, <tspan fill="#10b981">"MySQL"</tspan>, <tspan fill="#10b981">"Redis"</tspan>],</text>
-      <text y="148" fill="#64748b">  "specialties": [<tspan fill="#8b5cf6">"自动化任务调度"</tspan>, <tspan fill="#8b5cf6">"逆向与数据抓取"</tspan>, <tspan fill="#8b5cf6">"高可用后端架构"</tspan>, <tspan fill="#8b5cf6">"现代前端交付"</tspan>]</text>
-      <text y="168" fill="#64748b">}</text>
+      <text y="88" fill="#1e293b" font-weight="600">{</text>
+      <text y="112" fill="#334155" font-weight="600">  "work_mode": <tspan fill="#0284c7">"Full-Time Remote / Available for Freelance"</tspan>,</text>
+      <text y="136" fill="#334155" font-weight="600">  "core_stack": [<tspan fill="#10b981">"Java (Spring)"</tspan>, <tspan fill="#10b981">"Python (Flask)"</tspan>, <tspan fill="#10b981">"Vue.js 3"</tspan>, <tspan fill="#10b981">"Docker"</tspan>, <tspan fill="#10b981">"MySQL"</tspan>, <tspan fill="#10b981">"Redis"</tspan>],</text>
+      <text y="160" fill="#334155" font-weight="600">  "specialties": [<tspan fill="#8b5cf6">"自动化任务调度"</tspan>, <tspan fill="#8b5cf6">"逆向爬虫开发"</tspan>, <tspan fill="#8b5cf6">"高可用系统"</tspan>]</text>
+      <text y="174" fill="#1e293b" font-weight="600">}</text>
     </g>
   </g>
 
-  <!-- ==================== 区域 3：全透明 技能矩阵 (Tech Arsenal) ==================== -->
-  <g id="skills-section" transform="translate(80, 480)">
-    <!-- 标题与装饰分割线 -->
-    <text x="0" y="20" font-family="'JetBrains Mono', monospace" font-size="13" font-weight="800" fill="#0f172a" letter-spacing="1">
-      // 🛠️ TECH STACK ARSENAL (技能装备库)
+  <!-- ==================== 区域 3：技能矩阵 (无边框胶囊，大字号 15px) ==================== -->
+  <g id="skills-section" transform="translate(30, 480)">
+    <!-- 标题 -->
+    <text x="5" y="15" font-family="'JetBrains Mono', -apple-system, sans-serif" font-size="16" font-weight="900" fill="#0f172a" letter-spacing="0.5">
+      🛠️ 核心技能清单 (TECH STACK ARSENAL)
     </text>
-    <line x1="320" y1="16" x2="1040" y2="16" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="4 4"/>
 
-    <!-- 技能胶囊徽章组 (纯透明底色，流光直接从其间穿过) -->
-    <g transform="translate(0, 40)">
+    <!-- 技能胶囊组 (完全去除边框 stroke，纯靠立体投影与柔白底色，字体 15px) -->
+    <g transform="translate(0, 32)">
       <!-- 第 1 排 -->
       <g transform="translate(0, 0)">
-        <rect width="115" height="34" rx="8" fill="#ffffff" fill-opacity="0.5" stroke="#cbd5e1" stroke-width="1"/>
-        <text x="14" y="22" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" fill="#ea580c">☕ Java</text>
+        <rect width="105" height="40" rx="10" fill="#ffffff" fill-opacity="0.88" filter="url(#softShadow)"/>
+        <text x="14" y="25" font-family="-apple-system, sans-serif" font-size="15" font-weight="800" fill="#ea580c">☕ Java</text>
       </g>
-      <g transform="translate(130, 0)">
-        <rect width="125" height="34" rx="8" fill="#ffffff" fill-opacity="0.5" stroke="#cbd5e1" stroke-width="1"/>
-        <text x="14" y="22" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" fill="#0284c7">🐍 Python</text>
+      <g transform="translate(118, 0)">
+        <rect width="120" height="40" rx="10" fill="#ffffff" fill-opacity="0.88" filter="url(#softShadow)"/>
+        <text x="14" y="25" font-family="-apple-system, sans-serif" font-size="15" font-weight="800" fill="#0284c7">🐍 Python</text>
       </g>
-      <g transform="translate(270, 0)">
-        <rect width="160" height="34" rx="8" fill="#ffffff" fill-opacity="0.5" stroke="#cbd5e1" stroke-width="1"/>
-        <text x="14" y="22" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" fill="#16a34a">🍃 Spring Boot</text>
+      <g transform="translate(250, 0)">
+        <rect width="165" height="40" rx="10" fill="#ffffff" fill-opacity="0.88" filter="url(#softShadow)"/>
+        <text x="14" y="25" font-family="-apple-system, sans-serif" font-size="15" font-weight="800" fill="#16a34a">🍃 Spring Boot</text>
       </g>
-      <g transform="translate(445, 0)">
-        <rect width="130" height="34" rx="8" fill="#ffffff" fill-opacity="0.5" stroke="#cbd5e1" stroke-width="1"/>
-        <text x="14" y="22" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" fill="#10b981">⚡ Vue.js 3</text>
+      <g transform="translate(427, 0)">
+        <rect width="130" height="40" rx="10" fill="#ffffff" fill-opacity="0.88" filter="url(#softShadow)"/>
+        <text x="14" y="25" font-family="-apple-system, sans-serif" font-size="15" font-weight="800" fill="#10b981">⚡ Vue.js 3</text>
       </g>
-      <g transform="translate(590, 0)">
-        <rect width="120" height="34" rx="8" fill="#ffffff" fill-opacity="0.5" stroke="#cbd5e1" stroke-width="1"/>
-        <text x="14" y="22" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" fill="#0284c7">⚛️ React</text>
+      <g transform="translate(569, 0)">
+        <rect width="120" height="40" rx="10" fill="#ffffff" fill-opacity="0.88" filter="url(#softShadow)"/>
+        <text x="14" y="25" font-family="-apple-system, sans-serif" font-size="15" font-weight="800" fill="#0284c7">⚛️ React</text>
       </g>
-      <g transform="translate(725, 0)">
-        <rect width="130" height="34" rx="8" fill="#ffffff" fill-opacity="0.5" stroke="#cbd5e1" stroke-width="1"/>
-        <text x="14" y="22" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" fill="#16a34a">📦 Node.js</text>
-      </g>
-      <g transform="translate(870, 0)">
-        <rect width="170" height="34" rx="8" fill="#ffffff" fill-opacity="0.5" stroke="#cbd5e1" stroke-width="1"/>
-        <text x="14" y="22" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" fill="#0284c7">🐬 MySQL / SQL</text>
+      <g transform="translate(701, 0)">
+        <rect width="119" height="40" rx="10" fill="#ffffff" fill-opacity="0.88" filter="url(#softShadow)"/>
+        <text x="14" y="25" font-family="-apple-system, sans-serif" font-size="15" font-weight="800" fill="#16a34a">📦 Node.js</text>
       </g>
 
       <!-- 第 2 排 -->
-      <g transform="translate(0, 48)">
-        <rect width="125" height="34" rx="8" fill="#ffffff" fill-opacity="0.5" stroke="#cbd5e1" stroke-width="1"/>
-        <text x="14" y="22" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" fill="#dc2626">🔴 Redis</text>
+      <g transform="translate(0, 52)">
+        <rect width="115" height="40" rx="10" fill="#ffffff" fill-opacity="0.88" filter="url(#softShadow)"/>
+        <text x="14" y="25" font-family="-apple-system, sans-serif" font-size="15" font-weight="800" fill="#0284c7">🐬 MySQL</text>
       </g>
-      <g transform="translate(140, 48)">
-        <rect width="150" height="34" rx="8" fill="#ffffff" fill-opacity="0.5" stroke="#cbd5e1" stroke-width="1"/>
-        <text x="14" y="22" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" fill="#16a34a">🍃 MongoDB</text>
+      <g transform="translate(128, 52)">
+        <rect width="115" height="40" rx="10" fill="#ffffff" fill-opacity="0.88" filter="url(#softShadow)"/>
+        <text x="14" y="25" font-family="-apple-system, sans-serif" font-size="15" font-weight="800" fill="#dc2626">🔴 Redis</text>
       </g>
-      <g transform="translate(305, 48)">
-        <rect width="165" height="34" rx="8" fill="#ffffff" fill-opacity="0.5" stroke="#cbd5e1" stroke-width="1"/>
-        <text x="14" y="22" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" fill="#0284c7">🐘 PostgreSQL</text>
+      <g transform="translate(256, 52)">
+        <rect width="125" height="40" rx="10" fill="#ffffff" fill-opacity="0.88" filter="url(#softShadow)"/>
+        <text x="14" y="25" font-family="-apple-system, sans-serif" font-size="15" font-weight="800" fill="#0284c7">🐳 Docker</text>
       </g>
-      <g transform="translate(485, 48)">
-        <rect width="130" height="34" rx="8" fill="#ffffff" fill-opacity="0.5" stroke="#cbd5e1" stroke-width="1"/>
-        <text x="14" y="22" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" fill="#0284c7">🐳 Docker</text>
+      <g transform="translate(394, 52)">
+        <rect width="115" height="40" rx="10" fill="#ffffff" fill-opacity="0.88" filter="url(#softShadow)"/>
+        <text x="14" y="25" font-family="-apple-system, sans-serif" font-size="15" font-weight="800" fill="#334155">🐧 Linux</text>
       </g>
-      <g transform="translate(630, 48)">
-        <rect width="120" height="34" rx="8" fill="#ffffff" fill-opacity="0.5" stroke="#cbd5e1" stroke-width="1"/>
-        <text x="14" y="22" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" fill="#334155">🐧 Linux</text>
+      <g transform="translate(522, 52)">
+        <rect width="120" height="40" rx="10" fill="#ffffff" fill-opacity="0.88" filter="url(#softShadow)"/>
+        <text x="14" y="25" font-family="-apple-system, sans-serif" font-size="15" font-weight="800" fill="#16a34a">⚙️ Nginx</text>
       </g>
-      <g transform="translate(765, 48)">
-        <rect width="125" height="34" rx="8" fill="#ffffff" fill-opacity="0.5" stroke="#cbd5e1" stroke-width="1"/>
-        <text x="14" y="22" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" fill="#16a34a">⚙️ Nginx</text>
-      </g>
-      <g transform="translate(905, 48)">
-        <rect width="135" height="34" rx="8" fill="#ffffff" fill-opacity="0.5" stroke="#cbd5e1" stroke-width="1"/>
-        <text x="14" y="22" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" fill="#ea580c">🐙 Git / CI/CD</text>
+      <g transform="translate(654, 52)">
+        <rect width="166" height="40" rx="10" fill="#ffffff" fill-opacity="0.88" filter="url(#softShadow)"/>
+        <text x="14" y="25" font-family="-apple-system, sans-serif" font-size="15" font-weight="800" fill="#ea580c">🐙 Git / CI·CD</text>
       </g>
     </g>
   </g>
 
-  <!-- ==================== 区域 4：全透明 精选开源项目 (Featured Repositories) ==================== -->
-  <g id="projects-section" transform="translate(80, 640)">
-    <text x="0" y="20" font-family="'JetBrains Mono', monospace" font-size="13" font-weight="800" fill="#0f172a" letter-spacing="1">
-      // 🚀 FEATURED REPOSITORIES (开源代表作)
+  <!-- ==================== 区域 4：精选开源项目 (无边框卡片，大字号大标题) ==================== -->
+  <g id="projects-section" transform="translate(30, 650)">
+    <!-- 标题 -->
+    <text x="5" y="15" font-family="'JetBrains Mono', -apple-system, sans-serif" font-size="16" font-weight="900" fill="#0f172a" letter-spacing="0.5">
+      🚀 精选开源代表作 (FEATURED REPOSITORIES)
     </text>
-    <line x1="340" y1="16" x2="1040" y2="16" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="4 4"/>
 
-    <!-- 项目卡片 1：ikuuu_checkIn -->
-    <g transform="translate(0, 45)">
-      <rect width="505" height="135" rx="12" fill="#ffffff" fill-opacity="0.4" stroke="#cbd5e1" stroke-width="1.2" filter="drop-shadow(0 4px 10px rgba(15, 23, 42, 0.03))"/>
-      <g transform="translate(25, 30)" filter="url(#textGlow)">
-        <text font-family="-apple-system, sans-serif" font-size="16" font-weight="800" fill="#0284c7">
+    <!-- 卡片 1：ikuuu_checkIn -->
+    <g transform="translate(0, 32)">
+      <rect width="400" height="145" rx="14" fill="#ffffff" fill-opacity="0.88" filter="url(#softShadow)"/>
+      <g transform="translate(22, 32)" filter="url(#textHalo)">
+        <text font-family="-apple-system, sans-serif" font-size="19" font-weight="900" fill="#0284c7">
           🚁 ikuuu_checkIn
         </text>
-        <text x="455" text-anchor="end" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" fill="#eab308">
+        <text x="355" text-anchor="end" font-family="-apple-system, sans-serif" font-size="14" font-weight="800" fill="#d97706">
           ★ 8 Stars
         </text>
-        <text y="30" font-family="-apple-system, sans-serif" font-size="12" fill="#475569" width="450">
-          全自动多账号定时签到与消息推送脚本，已全面集成 GitHub Actions 自动化流水线。
+        <text y="32" font-family="-apple-system, sans-serif" font-size="14" font-weight="600" fill="#334155">
+          全自动多账号定时签到与推送脚本，
         </text>
-        <g transform="translate(0, 50)">
-          <rect width="60" height="20" rx="4" fill="#0284c7" fill-opacity="0.15"/>
-          <text x="10" y="14" font-size="10" font-weight="700" fill="#0284c7">Python</text>
-          <rect x="70" width="60" height="20" rx="4" fill="#10b981" fill-opacity="0.15"/>
-          <text x="80" y="14" font-size="10" font-weight="700" fill="#10b981">Actions</text>
+        <text y="54" font-family="-apple-system, sans-serif" font-size="14" font-weight="600" fill="#334155">
+          深度集成 GitHub Actions 自动化调度。
+        </text>
+        <g transform="translate(0, 72)">
+          <rect width="68" height="24" rx="6" fill="#0284c7" fill-opacity="0.12"/>
+          <text x="12" y="17" font-size="12" font-weight="800" fill="#0284c7">Python</text>
+          <rect x="78" width="76" height="24" rx="6" fill="#10b981" fill-opacity="0.12"/>
+          <text x="88" y="17" font-size="12" font-weight="800" fill="#10b981">Actions</text>
         </g>
       </g>
     </g>
 
-    <!-- 项目卡片 2：ossimport-Tool -->
-    <g transform="translate(535, 45)">
-      <rect width="505" height="135" rx="12" fill="#ffffff" fill-opacity="0.4" stroke="#cbd5e1" stroke-width="1.2" filter="drop-shadow(0 4px 10px rgba(15, 23, 42, 0.03))"/>
-      <g transform="translate(25, 30)" filter="url(#textGlow)">
-        <text font-family="-apple-system, sans-serif" font-size="16" font-weight="800" fill="#0284c7">
+    <!-- 卡片 2：ossimport-Tool -->
+    <g transform="translate(420, 32)">
+      <rect width="400" height="145" rx="14" fill="#ffffff" fill-opacity="0.88" filter="url(#softShadow)"/>
+      <g transform="translate(22, 32)" filter="url(#textHalo)">
+        <text font-family="-apple-system, sans-serif" font-size="19" font-weight="900" fill="#0284c7">
           📦 ossimport-Tool
         </text>
-        <text x="455" text-anchor="end" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" fill="#64748b">
+        <text x="355" text-anchor="end" font-family="-apple-system, sans-serif" font-size="14" font-weight="700" fill="#475569">
           Shell / OSS
         </text>
-        <text y="30" font-family="-apple-system, sans-serif" font-size="12" fill="#475569">
-          海量对象存储数据自动化迁移工具，专为数据快速流转、断点续传与批量任务打造。
+        <text y="32" font-family="-apple-system, sans-serif" font-size="14" font-weight="600" fill="#334155">
+          海量对象存储数据自动化迁移工具，
         </text>
-        <g transform="translate(0, 50)">
-          <rect width="60" height="20" rx="4" fill="#16a34a" fill-opacity="0.15"/>
-          <text x="14" y="14" font-size="10" font-weight="700" fill="#16a34a">Shell</text>
-          <rect x="70" width="75" height="20" rx="4" fill="#8b5cf6" fill-opacity="0.15"/>
-          <text x="78" y="14" font-size="10" font-weight="700" fill="#8b5cf6">Cloud OSS</text>
+        <text y="54" font-family="-apple-system, sans-serif" font-size="14" font-weight="600" fill="#334155">
+          专为高速断点续传与多云数据流转打造。
+        </text>
+        <g transform="translate(0, 72)">
+          <rect width="64" height="24" rx="6" fill="#16a34a" fill-opacity="0.12"/>
+          <text x="14" y="17" font-size="12" font-weight="800" fill="#16a34a">Shell</text>
+          <rect x="74" width="88" height="24" rx="6" fill="#8b5cf6" fill-opacity="0.12"/>
+          <text x="84" y="17" font-size="12" font-weight="800" fill="#8b5cf6">Cloud OSS</text>
         </g>
       </g>
     </g>
   </g>
 
-  <!-- ==================== 区域 5：底边 HUD 装饰线 ==================== -->
-  <g transform="translate(600, 930)" text-anchor="middle">
-    <text font-family="'JetBrains Mono', monospace" font-size="11" font-weight="600" fill="#94a3b8" letter-spacing="1">
-      // END OF PROFILE — SYSTEM READY FOR FREELANCE &amp; COLLABORATION //
+  <!-- 底部微弱指示文字 (无任何线条边框) -->
+  <g transform="translate(440, 855)" text-anchor="middle">
+    <text font-family="'JetBrains Mono', monospace" font-size="12" font-weight="700" fill="#94a3b8" letter-spacing="1">
+      // SYSTEM ONLINE · AVAILABLE FOR FREELANCE &amp; COLLABORATION //
     </text>
   </g>
 

@@ -1,22 +1,20 @@
 <div align="center">
-  <!-- 整个 README 全景一体化 Lightfall 纵贯流光雨大屏 (存储于 assets/lightfall-banner.svg) -->
-  <img src="./assets/lightfall-banner.svg" width="100%" alt="Mr-吴 // 995william Lightfall Cyberpunk Profile" />
+  <!-- 整个 README 全景一体化 Lightfall 纵贯流光大屏 (无边框·大字号·高对比度版) -->
+  <img src="./assets/lightfall-banner.svg" width="100%" alt="Mr-吴 // 995william Lightfall Profile" />
 </div>
+
+<br/>
 
 <p align="center">
   <a href="https://www.cnblogs.com/995i996/" target="_blank">
-    <img src="https://img.shields.io/badge/📝_博客园-995i996-0078D7?style=flat-square&logo=blogger&logoColor=white" />
+    <img src="https://img.shields.io/badge/博客园-995i996-0284c7?style=for-the-badge&logo=blogger&logoColor=white" />
   </a>
   <a href="https://github.com/995william/ikuuu_checkIn" target="_blank">
-    <img src="https://img.shields.io/badge/🚁_ikuuu__checkIn-★_8_Stars-eab308?style=flat-square&logo=github" />
+    <img src="https://img.shields.io/badge/ikuuu__checkIn-★_8_Stars-d97706?style=for-the-badge&logo=github&logoColor=white" />
   </a>
   <a href="https://github.com/995william/ossimport-Tool" target="_blank">
-    <img src="https://img.shields.io/badge/📦_ossimport--Tool-OSS_迁移-16a34a?style=flat-square&logo=linux" />
+    <img src="https://img.shields.io/badge/ossimport--Tool-OSS_迁移-16a34a?style=for-the-badge&logo=linux&logoColor=white" />
   </a>
-  <a href="https://github.com/995william" target="_blank">
-    <img src="https://img.shields.io/badge/💼_工作状态-全职自由开发-2ea44f?style=flat-square" />
-  </a>
-  <img src="https://img.shields.io/badge/⚡_编码信仰-Tabs_Over_Spaces-blueviolet?style=flat-square" />
 </p>
 
 <br/>
